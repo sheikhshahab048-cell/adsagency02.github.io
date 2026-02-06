@@ -2,31 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ads Agency 0.2 | Growth & Performance Marketing</title>
+<title>Ads Agency 0.2 | Complete Business Growth System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg1:#0b1220;
-  --bg2:#111827;
-  --bg3:#1f2937;
-  --accent:#38bdf8;
-  --accent2:#22c55e;
-  --card:#0f172a;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
-}
 *{box-sizing:border-box}
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  color:var(--text);
-  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  color:#e5e7eb;
+  background:linear-gradient(135deg,#020617,#0f172a,#020617);
+  line-height:1.7;
 }
-a{text-decoration:none;color:inherit}
-section{padding:100px 20px}
+section{padding:110px 20px}
 .container{max-width:1200px;margin:auto}
 
 /* HERO */
@@ -34,81 +24,107 @@ section{padding:100px 20px}
   min-height:100vh;
   display:flex;
   align-items:center;
+  justify-content:center;
   text-align:center;
   background:
-    radial-gradient(900px 300px at 10% 10%,rgba(56,189,248,.15),transparent),
-    radial-gradient(700px 250px at 90% 20%,rgba(34,197,94,.15),transparent);
+    radial-gradient(900px 300px at 15% 15%,rgba(56,189,248,.18),transparent),
+    radial-gradient(700px 300px at 85% 20%,rgba(34,197,94,.18),transparent);
 }
 .hero h1{
-  font-size:64px;
-  margin-bottom:15px;
-  text-shadow:0 12px 30px rgba(0,0,0,.6);
+  font-size:72px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-shadow:
+    0 3px 0 #020617,
+    0 12px 35px rgba(0,0,0,.7),
+    0 0 60px rgba(56,189,248,.5);
 }
-.hero h1 span{color:var(--accent)}
+.hero h1 span{color:#38bdf8}
 .hero p{
-  max-width:800px;
-  margin:auto;
-  font-size:18px;
-  color:var(--muted);
+  max-width:850px;
+  margin:25px auto 0;
+  font-size:19px;
+  color:#9ca3af;
 }
-.btn{
+.cta{
   display:inline-block;
-  margin-top:30px;
-  padding:16px 34px;
-  border-radius:14px;
-  font-weight:600;
-  background:linear-gradient(135deg,var(--accent),#60a5fa);
-  color:#020617;
-  box-shadow:0 20px 40px rgba(0,0,0,.45);
+  margin-top:45px;
+  padding:22px 56px;
+  font-size:20px;
+  font-weight:700;
+  color:#022c22;
+  background:linear-gradient(135deg,#22c55e,#4ade80);
+  border-radius:20px;
+  box-shadow:
+    0 10px 0 #15803d,
+    0 30px 80px rgba(0,0,0,.8);
   transition:.3s;
 }
-.btn:hover{transform:translateY(-6px)}
+.cta:hover{transform:translateY(-6px)}
 
-/* COMMON */
+/* TITLES */
 .title{
-  font-size:44px;
+  font-size:46px;
   text-align:center;
   margin-bottom:15px;
 }
 .sub{
+  max-width:900px;
+  margin:0 auto 70px;
   text-align:center;
-  max-width:800px;
-  margin:0 auto 60px;
-  color:var(--muted);
+  color:#9ca3af;
+  font-size:18px;
 }
+
+/* CARDS */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+  gap:32px;
 }
 .card{
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:22px;
-  padding:34px;
-  box-shadow:0 30px 70px rgba(0,0,0,.45);
+  background:linear-gradient(180deg,#020617,#020617);
+  border:1px solid #1e293b;
+  border-radius:26px;
+  padding:38px;
+  box-shadow:0 35px 90px rgba(0,0,0,.75);
   transition:.35s;
 }
-.card:hover{transform:translateY(-10px)}
+.card:hover{transform:translateY(-14px)}
 .icon{
-  width:60px;
-  height:60px;
-  border-radius:16px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  box-shadow:0 12px 30px rgba(0,0,0,.45);
-  margin-bottom:15px;
+  width:70px;height:70px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  box-shadow:0 18px 45px rgba(0,0,0,.7);
+  margin-bottom:20px;
 }
 
-/* CTA STRIP */
-.cta{
-  background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(34,197,94,.15));
+/* INFO TEXT */
+.info{
+  max-width:950px;
+  margin:30px auto;
+  font-size:18px;
+  color:#9ca3af;
+  text-align:center;
+}
+.fomo{
+  font-size:26px;
+  font-weight:700;
+  text-align:center;
+  color:#38bdf8;
+  margin:40px auto;
+}
+
+/* CONTACT */
+.contact{
+  background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(34,197,94,.12));
   text-align:center;
 }
 
 /* FOOTER */
 footer{
   background:#020617;
-  padding:40px 20px;
+  padding:45px 20px;
   text-align:center;
   color:#9ca3af;
 }
@@ -120,93 +136,121 @@ footer{
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1><span>Ads Agency 0.2</span><br>Business Growth Partner</h1>
+    <h1>ADS AGENCY <span>0.2</span></h1>
     <p>
-      We help businesses grow using Meta Ads, Google Ads, landing pages,
-      posters, funnels and complete digital strategy — not just ads.
+      We build complete business growth systems using Meta Ads, Google Ads,
+      landing pages and professional ad content — so you don’t have to worry about anything.
     </p>
-    <a class="btn" href="https://wa.me/917042139521">Start WhatsApp Call</a>
+    <a class="cta" href="https://wa.me/917042139521">Start WhatsApp Strategy Call</a>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section>
-  <div class="container">
-    <h2 class="title">Who We Are</h2>
-    <p class="sub">
-      Ads Agency 0.2 is not just an ads agency. We work as your digital growth team.
-      From strategy calls to creatives, landing pages and ad execution — we handle everything.
-    </p>
-    <div class="cards">
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Strategy First</h3>
-        <p>We first understand your business, audience and goals.</p>
-      </div>
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Complete Support</h3>
-        <p>Ads, posters, landing pages and optimization — all covered.</p>
-      </div>
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Long-Term Growth</h3>
-        <p>We focus on systems, not short-term tricks.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
+<!-- WHAT WE DO -->
 <section>
   <div class="container">
     <h2 class="title">What We Do For Your Business</h2>
-    <p class="sub">Everything required to generate leads & sales online.</p>
+    <p class="sub">
+      You contact us. We handle everything else — from planning to execution.
+    </p>
+
     <div class="cards">
-      <div class="card"><div class="icon"></div><h3>Meta Ads</h3><p>Facebook & Instagram ads with testing & scaling.</p></div>
-      <div class="card"><div class="icon"></div><h3>Google Ads</h3><p>Search & high-intent ads for ready-to-buy users.</p></div>
-      <div class="card"><div class="icon"></div><h3>Landing Pages</h3><p>High-converting pages designed for ads.</p></div>
-      <div class="card"><div class="icon"></div><h3>Poster & Creatives</h3><p>Professional ad creatives & posters.</p></div>
-      <div class="card"><div class="icon"></div><h3>Strategy Call</h3><p>Detailed discussion before starting ads.</p></div>
-      <div class="card"><div class="icon"></div><h3>Suggestions & Consulting</h3><p>We guide what works best for your business.</p></div>
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Meta Ads (Facebook & Instagram)</h3>
+        <p>
+          We create, test and scale Meta ad campaigns that bring real leads and sales.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Google Ads</h3>
+        <p>
+          We run high-intent Google Ads to capture customers who are already searching.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Landing Pages</h3>
+        <p>
+          We design and build conversion-focused landing pages from our side.
+          You don’t need a website developer.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Ad Content & Creatives</h3>
+        <p>
+          We create professional videos, images and posters required to run ads.
+          You don’t need to think about what content to use.
+        </p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <div class="container">
+    <h2 class="title">Why Ads Are Important Today</h2>
+
+    <p class="fomo">
+      If you are not running ads, your competitors are taking your customers.
+    </p>
+
+    <p class="info">
+      Ads allow your business to appear directly in front of people
+      who are already interested in your product or service.
+    </p>
+
+    <p class="info">
+      Instead of waiting for customers, ads bring customers to you —
+      daily, consistently and at scale.
+    </p>
   </div>
 </section>
 
 <!-- PROCESS -->
 <section>
   <div class="container">
-    <h2 class="title">How We Work</h2>
+    <h2 class="title">How Our System Works</h2>
+    <p class="sub">Simple process. Complete execution.</p>
+
     <div class="cards">
-      <div class="card"><div class="icon"></div><h3>1. Call & Analysis</h3><p>Understand business & market.</p></div>
-      <div class="card"><div class="icon"></div><h3>2. Setup</h3><p>Creatives, landing page & ads.</p></div>
-      <div class="card"><div class="icon"></div><h3>3. Launch</h3><p>Testing & data collection.</p></div>
-      <div class="card"><div class="icon"></div><h3>4. Optimize</h3><p>Improve performance & ROI.</p></div>
-      <div class="card"><div class="icon"></div><h3>5. Scale</h3><p>Grow what works consistently.</p></div>
+      <div class="card"><div class="icon"></div><h3>1. Strategy Call</h3><p>We understand your business and goals.</p></div>
+      <div class="card"><div class="icon"></div><h3>2. Content Creation</h3><p>Videos, images and posters created by us.</p></div>
+      <div class="card"><div class="icon"></div><h3>3. Landing Page</h3><p>Conversion-ready page built from our side.</p></div>
+      <div class="card"><div class="icon"></div><h3>4. Ads Launch</h3><p>Meta & Google ads launched and tested.</p></div>
+      <div class="card"><div class="icon"></div><h3>5. Optimization</h3><p>Daily improvements and scaling.</p></div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="cta">
+<section class="contact">
   <div class="container">
     <h2 class="title">Contact Ads Agency 0.2</h2>
-    <p class="sub">Let’s discuss your business growth.</p>
+    <p class="sub">Everything you need. One team.</p>
+
     <div class="cards">
       <div class="card">
         <div class="icon"></div>
         <h3>WhatsApp</h3>
-        <a class="btn" href="https://wa.me/917042139521">Chat on WhatsApp</a>
+        <a class="cta" href="https://wa.me/917042139521">Chat Now</a>
       </div>
+
       <div class="card">
         <div class="icon"></div>
         <h3>Instagram</h3>
-        <a class="btn" href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx">Visit Instagram</a>
+        <a class="cta" href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx">Visit Profile</a>
       </div>
+
       <div class="card">
         <div class="icon"></div>
         <h3>Facebook</h3>
-        <a class="btn" href="https://www.facebook.com/share/17xdNtcAMy/">Visit Facebook</a>
+        <a class="cta" href="https://www.facebook.com/share/17xdNtcAMy/">Visit Page</a>
       </div>
     </div>
   </div>
@@ -218,3 +262,5 @@ footer{
 
 </body>
 </html>
+
+
