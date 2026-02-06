@@ -1,98 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Ads Agency | Grow With Performance Marketing</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ads Agency 0.2 | Performance Marketing</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
-  line-height: 1.6;
+:root{
+  --bg1:#0f2027;
+  --bg2:#203a43;
+  --bg3:#2c5364;
+  --accent:#3cff8f;
+  --accent2:#5fd3ff;
+  --card:#0b1e26;
+  --text:#e9f3f6;
+  --muted:#b6d0db;
 }
 
-/* COMMON */
-section {
-  padding: 90px 20px;
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:var(--text);
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
 }
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-h1, h2, h3 {
-  margin-bottom: 10px;
-}
-p {
-  color: #475569;
-}
-.btn {
-  display: inline-block;
-  padding: 14px 26px;
-  border-radius: 30px;
-  background: #22c55e;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
+
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:auto;padding:80px 20px}
 
 /* HERO */
-.hero {
-  background: linear-gradient(135deg, #eef2ff, #f8fafc);
-  text-align: center;
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(1200px 400px at 10% 10%,rgba(95,211,255,.15),transparent),
+    radial-gradient(800px 300px at 90% 20%,rgba(60,255,143,.15),transparent);
 }
-.hero h1 {
-  font-size: 44px;
+.hero h1{
+  font-size:64px;
+  line-height:1.05;
+  margin:0 0 20px;
+  text-shadow:0 10px 30px rgba(0,0,0,.6);
 }
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
+.hero h1 span{
+  color:var(--accent);
 }
+.hero p{
+  max-width:720px;
+  font-size:18px;
+  color:var(--muted);
+}
+.btns{display:flex;gap:16px;margin-top:30px;flex-wrap:wrap}
+.btn{
+  padding:16px 26px;
+  border-radius:14px;
+  font-weight:600;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#062018;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+  transform:translateZ(0);
+  transition:.3s;
+}
+.btn.secondary{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.25);
+  color:var(--text);
+}
+.btn:hover{transform:translateY(-6px) scale(1.02)}
+
+/* SECTIONS */
+section{position:relative}
+.section-title{
+  font-size:42px;
+  margin-bottom:16px;
+  text-shadow:0 8px 20px rgba(0,0,0,.45);
+}
+.section-sub{color:var(--muted);max-width:780px}
 
 /* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
+  margin-top:40px;
 }
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
+  padding:30px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 30px 70px rgba(0,0,0,.45);
+  transform-style:preserve-3d;
+  transition:.35s;
 }
-.card span {
-  font-size: 32px;
+.card:hover{
+  transform:translateY(-10px) rotateX(4deg) rotateY(-4deg);
+}
+.card h3{margin:10px 0}
+.icon{
+  width:56px;height:56px;border-radius:16px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
 }
 
-/* SERVICES */
-.service {
-  border-left: 6px solid #6366f1;
+/* SPLIT */
+.split{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+
+/* PRICING */
+.price{
+  font-size:32px;
+  color:var(--accent);
+  font-weight:700;
 }
 
-/* PROCESS */
-.process .card {
-  border-top: 5px solid #22c55e;
-}
-
-/* CONTACT */
-.contact {
-  background: linear-gradient(135deg, #f1f5f9, #eef2ff);
-  text-align: center;
-}
-.contact a {
-  text-decoration: none;
-  color: #0f172a;
+/* CTA */
+.cta{
+  background:
+    linear-gradient(135deg,rgba(60,255,143,.15),rgba(95,211,255,.15));
+  border-top:1px solid rgba(255,255,255,.15);
+  border-bottom:1px solid rgba(255,255,255,.15);
 }
 
 /* FOOTER */
-footer {
-  background: #0f172a;
-  color: #cbd5f5;
-  text-align: center;
-  padding: 25px;
+footer{
+  background:#06161c;
+  padding:40px 20px;
+  color:#9fbac6;
+  text-align:center;
 }
 </style>
 </head>
@@ -102,116 +148,136 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Grow Your Business With Ads 🚀</h1>
-    <p>We run high-converting Meta & Google Ads that bring real leads and sales.</p>
-    <a class="btn" href="https://wa.me/917042139521">Start WhatsApp Chat</a>
+    <h1><span>Ads Agency 0.2</span><br/>Performance Marketing That Scales</h1>
+    <p>We specialize in Meta Ads & Google Ads with data-driven strategies, conversion-focused funnels, and transparent reporting. Built for brands that want consistent growth—not vanity metrics.</p>
+    <div class="btns">
+      <a class="btn" href="https://wa.me/917042139521">Start WhatsApp Chat</a>
+      <a class="btn secondary" href="#services">Explore Services</a>
+    </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section>
-  <div class="container">
-    <h2>About Ads Agency</h2>
-    <p>
-      Ads Agency is a performance-driven digital marketing agency focused on
-      helping businesses scale using Meta Ads and Google Ads.
-      We believe in transparency, data-driven strategy, and long-term growth.
-    </p>
-    <div class="cards">
-      <div class="card"><span>🎯</span><h3>Result Focused</h3><p>No fake promises, only measurable growth.</p></div>
-      <div class="card"><span>📊</span><h3>Daily Monitoring</h3><p>Your ads are optimized every single day.</p></div>
-      <div class="card"><span>🤝</span><h3>Trusted Partner</h3><p>We work like your in-house marketing team.</p></div>
+  <div class="container split">
+    <div>
+      <h2 class="section-title">About Ads Agency 0.2</h2>
+      <p class="section-sub">
+        Ads Agency 0.2 is a results-first digital advertising studio. We plan, launch, test, and scale paid campaigns across Meta & Google with one goal—profitable growth.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Strategy First</h3>
+          <p>Clear funnel, clear numbers, zero confusion.</p>
+        </div>
+        <div class="card">
+          <div class="icon"></div>
+          <h3>Daily Optimization</h3>
+          <p>We monitor performance every day, not once a week.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Why Clients Trust Us</h3>
+      <p>Transparent reporting • Real KPIs • No fake guarantees • Long-term mindset</p>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section>
+<section id="services">
   <div class="container">
-    <h2>Our Services</h2>
+    <h2 class="section-title">Our Core Services</h2>
+    <p class="section-sub">End-to-end paid advertising execution.</p>
     <div class="cards">
-      <div class="card service">
-        <span>📢</span>
-        <h3>Meta Ads (Facebook & Instagram)</h3>
-        <p>
-          Lead generation, sales campaigns, retargeting, funnel setup,
-          creatives testing and scaling.
-        </p>
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Meta Ads</h3>
+        <p>Facebook & Instagram Ads with creative testing and scaling.</p>
       </div>
-      <div class="card service">
-        <span>🔍</span>
+      <div class="card">
+        <div class="icon"></div>
         <h3>Google Ads</h3>
-        <p>
-          Search ads, display ads, YouTube ads, keyword research,
-          conversion tracking & ROI optimization.
-        </p>
+        <p>Search, Display & high-intent keyword targeting.</p>
       </div>
-      <div class="card service">
-        <span>🧠</span>
-        <h3>Ad Strategy & Funnel</h3>
-        <p>
-          Complete ad funnel planning from awareness to conversion.
-        </p>
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Funnels & CRO</h3>
+        <p>Landing pages optimized for conversions.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY US -->
+<!-- RESULTS -->
 <section>
   <div class="container">
-    <h2>Why Choose Us</h2>
+    <h2 class="section-title">Proven Results</h2>
     <div class="cards">
-      <div class="card"><span>✅</span><h3>Transparent Work</h3><p>Full clarity on ads & performance.</p></div>
-      <div class="card"><span>⚡</span><h3>Fast Support</h3><p>Quick response on WhatsApp.</p></div>
-      <div class="card"><span>📈</span><h3>Scalable Growth</h3><p>We scale what already works.</p></div>
+      <div class="card">
+        <h3>3× Lead Growth</h3>
+        <p>Service business scaled with Meta funnels.</p>
+      </div>
+      <div class="card">
+        <h3>Lower CPL</h3>
+        <p>45% cost reduction after optimization.</p>
+      </div>
+      <div class="card">
+        <h3>Daily Sales</h3>
+        <p>Google Search Ads delivering consistent conversions.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process">
+<!-- PRICING -->
+<section class="cta">
   <div class="container">
-    <h2>How We Work</h2>
+    <h2 class="section-title">Pricing</h2>
     <div class="cards">
-      <div class="card"><span>1️⃣</span><h3>Understand Business</h3><p>Deep research of your offer & audience.</p></div>
-      <div class="card"><span>2️⃣</span><h3>Launch Ads</h3><p>Test creatives & targeting.</p></div>
-      <div class="card"><span>3️⃣</span><h3>Optimize & Scale</h3><p>Increase ROI with data-based decisions.</p></div>
+      <div class="card">
+        <h3>Starter</h3>
+        <p class="price">₹9,999 / mo</p>
+        <p>Meta Ads Setup • 1 Campaign</p>
+      </div>
+      <div class="card">
+        <h3>Growth</h3>
+        <p class="price">₹19,999 / mo</p>
+        <p>Meta + Google • Funnels • Reports</p>
+      </div>
+      <div class="card">
+        <h3>Scale</h3>
+        <p class="price">Custom</p>
+        <p>Advanced Strategy • Daily Optimization</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
+<section>
   <div class="container">
-    <h2>Contact Us</h2>
-
+    <h2 class="section-title">Contact & Social</h2>
     <div class="cards">
-      <a class="card" href="https://wa.me/917042139521" target="_blank">
-        <span>📞</span>
+      <div class="card">
         <h3>WhatsApp</h3>
-        <p>7042139521</p>
-      </a>
-
-      <a class="card" href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank">
-        <span>📸</span>
+        <a class="btn" href="https://wa.me/917042139521">Chat Now</a>
+      </div>
+      <div class="card">
         <h3>Instagram</h3>
-        <p>@adsagency0.2</p>
-      </a>
-
-      <a class="card" href="https://www.facebook.com/share/17xdNtcAMy/" target="_blank">
-        <span>📘</span>
+        <a class="btn secondary" href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx">Visit Profile</a>
+      </div>
+      <div class="card">
         <h3>Facebook</h3>
-        <p>Ads Agency</p>
-      </a>
+        <a class="btn secondary" href="https://www.facebook.com/share/17xdNtcAMy/">Visit Page</a>
+      </div>
     </div>
-
-    <p style="margin-top:40px;">📍 India | Serving Clients Worldwide</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Ads Agency. All Rights Reserved.</p>
+  © 2026 Ads Agency 0.2 • All Rights Reserved
 </footer>
 
 </body>
