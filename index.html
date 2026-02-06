@@ -1,159 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ads & Growth Agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ads Growth Agency</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
-    body {
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-    header {
-      padding: 20px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #020617;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+body{
+  background: radial-gradient(circle at top, #0f2027, #000);
+  color:#fff;
+  overflow-x:hidden;
+}
 
-    header h1 {
-      font-size: 20px;
-      color: #38bdf8;
-    }
+/* HEADER */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  backdrop-filter: blur(12px);
+  background: rgba(0,0,0,0.4);
+  z-index:100;
+}
 
-    nav a {
-      margin-left: 20px;
-      font-size: 14px;
-      color: #cbd5f5;
-    }
+header h1{
+  font-weight:800;
+  color:#00eaff;
+  text-shadow:0 0 20px #00eaff;
+}
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+nav a{
+  margin-left:25px;
+  color:#fff;
+  font-weight:500;
+  transition:0.3s;
+}
 
-    .hero {
-      padding: 80px 8%;
-      text-align: center;
-    }
+nav a:hover{
+  color:#00eaff;
+}
 
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 8%;
+}
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      color: #cbd5f5;
-      font-size: 16px;
-    }
+.hero-box{
+  background:rgba(255,255,255,0.08);
+  border-radius:20px;
+  padding:60px;
+  backdrop-filter:blur(18px);
+  box-shadow:0 30px 80px rgba(0,0,0,0.7);
+  transform:perspective(1000px) rotateX(2deg);
+}
 
-    .btn-group {
-      margin-top: 30px;
-    }
+.hero h2{
+  font-size:48px;
+  font-weight:800;
+  margin-bottom:20px;
+  text-shadow:0 0 30px rgba(0,234,255,0.6);
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 28px;
-      background: #38bdf8;
-      color: #020617;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+.hero p{
+  max-width:750px;
+  margin:auto;
+  font-size:18px;
+  opacity:0.9;
+}
 
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-    }
+.btn-group{
+  margin-top:35px;
+}
 
-    section {
-      padding: 70px 8%;
-    }
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:16px 32px;
+  font-weight:600;
+  border-radius:12px;
+  background:linear-gradient(145deg,#00eaff,#0077ff);
+  color:#000;
+  box-shadow:0 10px 30px rgba(0,234,255,0.6);
+  transition:0.3s;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-    }
+.btn:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,234,255,0.9);
+}
 
-    .section-title h3 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
+/* SECTIONS */
+section{
+  padding:90px 8%;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
 
-    .card {
-      background: #020617;
-      padding: 25px;
-      border-radius: 10px;
-    }
+.section-title h3{
+  font-size:36px;
+  font-weight:800;
+  text-shadow:0 0 20px rgba(0,234,255,0.6);
+}
 
-    .card h4 {
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:35px;
+}
 
-    .card p {
-      font-size: 14px;
-      color: #cbd5f5;
-    }
+.card{
+  background:rgba(255,255,255,0.07);
+  padding:35px;
+  border-radius:18px;
+  backdrop-filter:blur(14px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.6);
+  transition:0.4s;
+}
 
-    .cta {
-      background: #020617;
-      text-align: center;
-      padding: 60px 8%;
-    }
+.card:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 40px 90px rgba(0,234,255,0.35);
+}
 
-    .cta h3 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
+.card i{
+  font-size:38px;
+  margin-bottom:15px;
+  color:#00eaff;
+  text-shadow:0 0 20px #00eaff;
+}
 
-    footer {
-      padding: 40px 8%;
-      background: #020617;
-      text-align: center;
-      font-size: 14px;
-      color: #94a3b8;
-    }
+.card h4{
+  margin-bottom:10px;
+  font-weight:700;
+}
 
-    .socials a {
-      margin: 0 10px;
-      color: #38bdf8;
-      font-weight: bold;
-    }
+/* CONTACT */
+.contact{
+  text-align:center;
+  background:linear-gradient(145deg,#020024,#000);
+}
 
-    @media(max-width: 600px) {
-      .hero h2 {
-        font-size: 28px;
-      }
-    }
-  </style>
+.socials{
+  margin-top:25px;
+}
+
+.socials a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:60px;
+  height:60px;
+  margin:10px;
+  border-radius:50%;
+  font-size:26px;
+  color:#00eaff;
+  background:rgba(255,255,255,0.08);
+  box-shadow:0 0 30px rgba(0,234,255,0.6);
+  transition:0.3s;
+}
+
+.socials a:hover{
+  transform:translateY(-8px) scale(1.1);
+  box-shadow:0 0 60px rgba(0,234,255,1);
+}
+
+/* FOOTER */
+footer{
+  padding:35px;
+  text-align:center;
+  opacity:0.6;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h2{font-size:34px;}
+  .hero-box{padding:40px;}
+}
+</style>
 </head>
 
 <body>
@@ -163,101 +212,57 @@
   <nav>
     <a href="#services">Services</a>
     <a href="#industries">Industries</a>
-    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h2>We Build Complete Ad-to-Conversion Systems</h2>
-  <p>
-    Meta Ads, Google Ads, high-converting landing pages, and professional creatives —
-    everything your business needs to generate quality leads and sales.
-  </p>
-
-  <div class="btn-group">
-    <a class="btn" href="https://wa.me/917042139521" target="_blank">WhatsApp Us</a>
-    <a class="btn secondary" href="#contact">Free Strategy Call</a>
+  <div class="hero-box">
+    <h2>We Build High-Impact Ad Systems</h2>
+    <p>Meta Ads, Google Ads, conversion-focused landing pages & premium creatives — built to scale businesses.</p>
+    <div class="btn-group">
+      <a class="btn" href="https://wa.me/917042139521" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
   </div>
 </section>
 
 <section id="services">
-  <div class="section-title">
-    <h3>Our Services</h3>
-    <p>End-to-end growth focused solutions</p>
-  </div>
-
+  <div class="section-title"><h3>Our Services</h3></div>
   <div class="grid">
-    <div class="card">
-      <h4>Meta Ads Management</h4>
-      <p>Facebook & Instagram ads focused on lead generation, sales, and brand growth.</p>
-    </div>
-
-    <div class="card">
-      <h4>Google Ads Management</h4>
-      <p>Search, Display & YouTube ads for high-intent customers.</p>
-    </div>
-
-    <div class="card">
-      <h4>High-Converting Landing Pages</h4>
-      <p>Fast, mobile-optimized landing pages designed only for conversions.</p>
-    </div>
-
-    <div class="card">
-      <h4>Creatives & Videos</h4>
-      <p>Professional posters, banners, reels, and promotional videos.</p>
-    </div>
+    <div class="card"><i class="fab fa-facebook"></i><h4>Meta Ads</h4><p>High-converting Facebook & Instagram campaigns.</p></div>
+    <div class="card"><i class="fab fa-google"></i><h4>Google Ads</h4><p>Search & YouTube ads for high-intent users.</p></div>
+    <div class="card"><i class="fa-solid fa-layer-group"></i><h4>Landing Pages</h4><p>Conversion-optimized, fast & mobile-first.</p></div>
+    <div class="card"><i class="fa-solid fa-video"></i><h4>Creatives</h4><p>Posters, reels & ad videos with impact.</p></div>
   </div>
 </section>
 
 <section id="industries">
-  <div class="section-title">
-    <h3>Industries We Work With</h3>
-  </div>
-
+  <div class="section-title"><h3>Industries</h3></div>
   <div class="grid">
-    <div class="card"><p>Real Estate</p></div>
-    <div class="card"><p>Coaching & Education</p></div>
-    <div class="card"><p>Local Services</p></div>
-    <div class="card"><p>E-commerce</p></div>
-    <div class="card"><p>Healthcare</p></div>
-    <div class="card"><p>Startups & Small Businesses</p></div>
+    <div class="card">Real Estate</div>
+    <div class="card">Coaching</div>
+    <div class="card">Local Services</div>
+    <div class="card">E-commerce</div>
+    <div class="card">Healthcare</div>
+    <div class="card">Startups</div>
   </div>
 </section>
 
-<section id="about">
-  <div class="section-title">
-    <h3>About Us</h3>
-  </div>
-
-  <div class="card">
-    <p>
-      We are a performance-focused ads agency helping businesses grow using the right
-      platform, strategy, landing pages, and creatives.
-      <br><br>
-      We don’t believe in copy-paste campaigns or fake promises —
-      only structured systems that convert.
-    </p>
-  </div>
-</section>
-
-<section id="contact" class="cta">
-  <h3>Let’s Grow Your Business</h3>
-  <p>Contact us for a free strategy discussion</p>
-  <br>
-  <p><strong>📞 Phone / WhatsApp:</strong> 7042139521</p>
-  <br>
-
+<section id="contact" class="contact">
+  <div class="section-title"><h3>Contact Us</h3></div>
+  <p>📞 7042139521</p>
   <div class="socials">
-    <a href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank">Instagram</a>
-    <a href="https://www.facebook.com/share/1BzLw5Cm6W/" target="_blank">Facebook</a>
+    <a href="https://wa.me/917042139521" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/share/1BzLw5Cm6W/" target="_blank"><i class="fab fa-facebook-f"></i></a>
   </div>
 </section>
 
 <footer>
-  © 2026 Ads Growth Agency · All Rights Reserved
+  © 2026 Ads Growth Agency
 </footer>
 
 </body>
 </html>
-
