@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADS Agency 0.2 – Performance Marketing & Growth Systems</title>
+<title>ADS Agency 0.2 – Performance Marketing</title>
 
-<meta name="description" content="ADS Agency 0.2 helps businesses grow using Meta Ads, Google Ads, landing pages and creatives. One complete growth system focused on calls & WhatsApp leads.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,10 +13,9 @@ body{
   font-family:'Poppins',sans-serif;
   background:linear-gradient(180deg,#0f172a,#020617);
   color:#e5e7eb;
-  line-height:1.8;
 }
 a{text-decoration:none;color:inherit}
-section{padding:110px 8%}
+section{padding:90px 8%}
 .center{text-align:center}
 
 /* HEADER */
@@ -34,59 +31,75 @@ header{
   align-items:center;
 }
 .logo{
-  font-size:28px;
+  font-size:26px;
   font-weight:800;
   color:#38bdf8;
   text-shadow:2px 2px 0 #1e40af;
 }
 .logo span{color:#a5b4fc}
 nav a{
-  margin-left:22px;
+  margin-left:18px;
   font-size:14px;
   font-weight:600;
 }
 
 /* HERO */
 .hero h1{
-  font-size:56px;
+  font-size:52px;
   font-weight:800;
   background:linear-gradient(135deg,#38bdf8,#a78bfa);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 .hero p{
-  max-width:950px;
-  margin:28px auto;
-  font-size:18px;
+  max-width:800px;
+  margin:22px auto;
   color:#c7d2fe;
 }
 .btn{
   display:inline-block;
-  padding:18px 46px;
+  padding:16px 42px;
   background:#38bdf8;
   color:#020617;
   font-weight:800;
   border-radius:14px;
-  margin-top:34px;
+  margin-top:26px;
 }
 
-/* GRID + CARDS */
+/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
 }
 .card{
   background:rgba(255,255,255,0.06);
-  padding:42px;
-  border-radius:22px;
+  padding:34px;
+  border-radius:20px;
   transition:.4s;
+  text-align:center;
 }
-.card:hover{transform:translateY(-12px)}
+.card:hover{transform:translateY(-10px) scale(1.02)}
+
+/* ICONS */
 .icon{
-  font-size:36px;
-  margin-bottom:16px;
-  color:#38bdf8;
+  width:64px;
+  height:64px;
+  margin:0 auto 14px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:#020617;
+  background:#38bdf8;
+  box-shadow:0 12px 30px rgba(56,189,248,.5);
+  animation:bounce 2.2s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
 }
 
 /* FLOATING CTA */
@@ -118,7 +131,36 @@ nav a{
   100%{transform:scale(1)}
 }
 
-/* MOBILE CALL BAR */
+/* CONTACT */
+.contact-box{
+  max-width:720px;
+  margin:auto;
+  background:linear-gradient(135deg,#38bdf8,#6366f1);
+  color:#020617;
+  padding:60px 40px;
+  border-radius:26px;
+}
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:26px;
+  margin-top:26px;
+}
+.socials a{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  background:#020617;
+  color:#38bdf8;
+  box-shadow:0 14px 40px rgba(0,0,0,.5);
+  animation:bounce 2s infinite;
+}
+
+/* MOBILE BAR */
 .mobile-bar{
   position:fixed;
   bottom:0;
@@ -132,41 +174,14 @@ nav a{
   display:none;
 }
 @media(max-width:768px){
-  .hero h1{font-size:38px}
+  .hero h1{font-size:36px}
   .mobile-bar{display:block}
-}
-
-/* CONTACT */
-.contact-box{
-  max-width:760px;
-  margin:auto;
-  background:linear-gradient(135deg,#38bdf8,#6366f1);
-  color:#020617;
-  padding:70px 46px;
-  border-radius:28px;
-}
-.socials{
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  margin-top:26px;
-}
-.socials a{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#020617;
-  color:#38bdf8;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:24px;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:50px;
+  padding:40px;
   color:#64748b;
 }
 </style>
@@ -178,160 +193,41 @@ footer{
   <div class="logo">ADS Agency <span>0.2</span></div>
   <nav>
     <a href="#services">Services</a>
-    <a href="#process">How We Work</a>
-    <a href="#whyus">Why Us</a>
+    <a href="#process">Process</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero center">
-  <h1>Performance Marketing That<br>Builds Real Business Growth</h1>
-
-  <p>
-    ADS Agency 0.2 is not just an ads management service.
-    We are a performance-focused growth partner for businesses that want
-    consistent leads, quality sales, and long-term scalability.
-    <br><br>
-    We work at the intersection of <b>Meta Ads, Google Ads, landing pages and creatives</b>,
-    and combine them into one complete system — so your ad budget does not get wasted
-    and every click has a clear purpose.
-  </p>
-
-  <a href="tel:7042139521" class="btn">📞 Book Free Strategy Call</a>
-</section>
-
-<!-- PROBLEM AWARENESS -->
-<section>
-  <div class="center">
-    <h2>Why Most Businesses Fail With Ads</h2>
-    <p style="max-width:900px;margin:30px auto;">
-      Most businesses don’t fail because ads don’t work.
-      They fail because ads are run without a proper system.
-      <br><br>
-      Traffic is sent to weak pages, creatives don’t communicate value,
-      tracking is missing, and decisions are taken on guesswork.
-      As a result, money gets spent but growth never becomes predictable.
-      <br><br>
-      At ADS Agency 0.2, we fix this exact problem by designing
-      ads, landing pages, and creatives as one integrated growth system.
-    </p>
-  </div>
+  <h1>Ads That Actually<br>Drive Business Growth</h1>
+  <p>Not just ads — complete growth system (Ads + Landing + Creatives)</p>
+  <a href="tel:7042139521" class="btn">📞 Free Strategy Call</a>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="center">
-    <h2>Our Core Services</h2>
-    <p style="max-width:900px;margin:26px auto;">
-      Everything required to turn paid traffic into real leads and customers —
-      handled under one roof, with clarity and accountability.
-    </p>
-  </div>
-
   <div class="grid">
-    <div class="card">
-      <div class="icon">📢</div>
-      <h3>Meta Ads (Facebook & Instagram)</h3>
-      <p>
-        We design and manage Meta ad campaigns focused on lead generation,
-        inquiries, and sales. From audience research to creative testing
-        and funnel optimization, every step is data-driven.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🔍</div>
-      <h3>Google Ads (Search & YouTube)</h3>
-      <p>
-        Google Ads allow you to capture users who are actively searching.
-        We build search-focused campaigns that target high-intent keywords
-        and convert demand into direct business inquiries.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">📄</div>
-      <h3>High-Converting Landing Pages</h3>
-      <p>
-        Ads without proper landing pages waste money.
-        We design pages optimized for speed, clarity,
-        and conversion — focused on calls and WhatsApp leads.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🎨</div>
-      <h3>Creatives & Ad Videos</h3>
-      <p>
-        Scroll-stopping creatives and short-form ad videos
-        that communicate value clearly and build trust
-        within the first few seconds.
-      </p>
-    </div>
+    <div class="card"><div class="icon">📢</div>Meta Ads</div>
+    <div class="card"><div class="icon">🔍</div>Google Ads</div>
+    <div class="card"><div class="icon">📄</div>Landing Pages</div>
+    <div class="card"><div class="icon">🎨</div>Creatives & Videos</div>
   </div>
 </section>
 
 <!-- PROCESS -->
 <section id="process">
-  <div class="center">
-    <h2>How We Work</h2>
-    <p style="max-width:900px;margin:26px auto;">
-      A clear, structured, and transparent process
-      designed to remove guesswork from paid advertising.
-    </p>
-  </div>
-
   <div class="grid">
-    <div class="card"><div class="icon">🔍</div><b>Understand the Business</b><p>We analyze your business model, audience, pricing and goals.</p></div>
-    <div class="card"><div class="icon">🎯</div><b>Select the Right Platform</b><p>Meta, Google, or both — based on intent and demand.</p></div>
-    <div class="card"><div class="icon">🧩</div><b>Build Pages & Creatives</b><p>Ad copies, visuals and landing pages aligned together.</p></div>
-    <div class="card"><div class="icon">🚀</div><b>Launch, Track & Scale</b><p>Continuous optimization based on real performance data.</p></div>
+    <div class="card"><div class="icon">🔍</div>Understand Business</div>
+    <div class="card"><div class="icon">🎯</div>Select Platform</div>
+    <div class="card"><div class="icon">🧩</div>Build Funnel</div>
+    <div class="card"><div class="icon">🚀</div>Scale Results</div>
   </div>
 </section>
 
-<!-- WHY US -->
-<section id="whyus">
-  <div class="center">
-    <h2>Why ADS Agency 0.2</h2>
-    <p style="max-width:900px;margin:26px auto;">
-      We are not a typical agency that promises unrealistic results.
-      Our focus is clarity, sustainability, and performance.
-    </p>
-  </div>
-
-  <div class="grid">
-    <div class="card">No fake guarantees or overnight promises</div>
-    <div class="card">Transparent reporting & honest communication</div>
-    <div class="card">Performance-focused decisions, not assumptions</div>
-    <div class="card">Ads, landing pages & creatives as one system</div>
-  </div>
-</section>
-
-<!-- WHO WE WORK WITH -->
-<section>
-  <div class="center">
-    <h2>Who We Work With</h2>
-    <p style="max-width:900px;margin:26px auto;">
-      Our systems are designed for businesses that want predictable growth.
-    </p>
-  </div>
-
-  <div class="grid">
-    <div class="card">Local Service Businesses</div>
-    <div class="card">Coaches & Consultants</div>
-    <div class="card">E-commerce & D2C Brands</div>
-    <div class="card">Professional Service Providers</div>
-  </div>
-</section>
-
-<!-- CTA REPEAT -->
+<!-- CTA -->
 <section class="center">
-  <h2>Get a Free Strategy Call</h2>
-  <p>
-    No obligation. No sales pressure.
-    Just clarity on what will actually work for your business.
-  </p>
+  <h2>Talk Directly With an Ads Expert</h2>
   <a href="tel:7042139521" class="btn">📞 Call Now</a>
 </section>
 
@@ -339,12 +235,7 @@ footer{
 <section id="contact">
   <div class="contact-box center">
     <h2>Contact ADS Agency 0.2</h2>
-    <p style="margin:20px 0;font-size:20px;">📞 7042139521</p>
-
-    <p>
-      Ready to stop guessing and start growing?
-      Reach out to us directly via call or WhatsApp.
-    </p>
+    <p style="font-size:20px;margin:18px 0;">📞 7042139521</p>
 
     <div class="socials">
       <a href="https://wa.me/917042139521?text=Hi,%20I%20want%20a%20free%20strategy%20call%20for%20my%20business" target="_blank">💬</a>
