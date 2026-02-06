@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agency0.2 – Growth Systems</title>
+<title>Agency 0.2 – Performance Marketing</title>
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:'Poppins',sans-serif;
-  background:
-    radial-gradient(circle at top left,#e0e7ff,transparent 45%),
-    radial-gradient(circle at bottom right,#ccfbf1,transparent 45%),
-    linear-gradient(180deg,#fdfcff,#f1f5f9);
+  background:linear-gradient(180deg,#f4f7fb,#eef2f7,#f4f7fb);
   color:#0f172a;
   line-height:1.7;
 }
@@ -26,37 +27,29 @@ body{
 header{
   position:sticky;
   top:0;
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(14px);
+  z-index:100;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(10px);
   padding:18px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  border-bottom:1px solid rgba(0,0,0,0.05);
-  z-index:100;
+  border-bottom:1px solid #e5e7eb;
 }
 
-/* BRAND LOGO – FIXED */
 .logo{
-  font-size:28px;
+  font-size:24px;
   font-weight:800;
-  letter-spacing:0.5px;
-  color:#4f46e5;
-  text-transform:capitalize;
-  text-shadow:
-    1px 1px 0 #c7d2fe,
-    2px 2px 0 #a5b4fc,
-    3px 3px 0 #818cf8;
+  letter-spacing:1px;
+  color:#1e293b;
 }
 
 .logo span{
-  font-weight:600;
-  color:#0f172a;
+  color:#2563eb;
 }
 
-/* NAV */
 nav a{
-  margin-left:24px;
+  margin-left:22px;
   font-size:14px;
   font-weight:600;
   color:#334155;
@@ -65,201 +58,189 @@ nav a{
 
 /* HERO */
 .hero{
-  padding:140px 8% 110px;
+  padding:130px 8% 110px;
   text-align:center;
 }
 
-/* MAIN HEADING – FIXED */
 .hero h1{
-  font-size:56px;
+  font-size:54px;
   font-weight:800;
-  line-height:1.1;
-  background:linear-gradient(135deg,#4f46e5,#06b6d4);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  text-shadow:
-    2px 2px 0 rgba(0,0,0,0.08),
-    4px 4px 0 rgba(0,0,0,0.05);
+  line-height:1.2;
+  color:#0f172a;
 }
 
 .hero h1 span{
-  display:block;
-  font-size:48px;
-  margin-top:8px;
+  color:#2563eb;
 }
 
-/* HERO TAGLINE */
-.hero-highlight{
-  margin:36px auto;
-  display:inline-block;
-  padding:18px 40px;
-  font-family:'Playfair Display',serif;
-  font-size:22px;
-  font-style:italic;
-  background:rgba(255,255,255,0.65);
-  backdrop-filter:blur(12px);
-  border-radius:22px;
-  box-shadow:0 35px 90px rgba(0,0,0,0.18);
-}
-
-/* HERO TEXT */
 .hero p{
-  max-width:950px;
-  margin:24px auto;
+  max-width:900px;
+  margin:28px auto;
   font-size:18px;
   color:#475569;
 }
 
-/* CTA */
-.cta a{
-  margin-top:36px;
-  display:inline-block;
-  padding:18px 48px;
-  background:linear-gradient(135deg,#4f46e5,#06b6d4);
-  color:#fff;
-  font-weight:700;
-  border-radius:16px;
-  text-decoration:none;
-  box-shadow:0 22px 55px rgba(79,70,229,0.45);
+.cta{
+  margin-top:35px;
 }
 
-/* SECTIONS */
-section{padding:110px 8%;}
+.cta a{
+  padding:16px 42px;
+  background:#2563eb;
+  color:#fff;
+  font-weight:700;
+  border-radius:10px;
+  text-decoration:none;
+  box-shadow:0 20px 40px rgba(37,99,235,0.3);
+}
+
+/* SECTION */
+section{
+  padding:100px 8%;
+}
 
 .section-title{
   text-align:center;
-  margin-bottom:80px;
+  margin-bottom:70px;
 }
 
 .section-title h2{
-  font-size:42px;
+  font-size:40px;
   font-weight:800;
 }
 
 .section-title p{
-  margin-top:15px;
+  margin-top:14px;
   color:#64748b;
-  font-style:italic;
 }
 
 /* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:48px;
+  gap:40px;
 }
 
-/* CARD */
+/* CARD – NEUMORPHIC */
 .card{
-  background:linear-gradient(180deg,rgba(255,255,255,0.75),rgba(255,255,255,0.4));
-  backdrop-filter:blur(14px);
-  padding:48px 36px;
-  border-radius:26px;
-  box-shadow:0 40px 110px rgba(0,0,0,0.22);
+  background:#f8fafc;
+  padding:42px 32px;
+  border-radius:18px;
+  box-shadow:
+    12px 12px 30px #dbe3ec,
+    -12px -12px 30px #ffffff;
   text-align:center;
-  transition:0.4s;
+  transition:0.3s;
 }
 
-.card:hover{transform:translateY(-14px);}
-
-/* ICON */
-.service-icon{
-  width:76px;
-  height:76px;
-  margin:0 auto 24px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
-  color:#fff;
-  box-shadow:0 16px 45px rgba(0,0,0,0.35), inset 0 -5px 0 rgba(0,0,0,0.25);
-}
-
-.indigo{background:#4f46e5;}
-.teal{background:#06b6d4;}
-.violet{background:#7c3aed;}
-.coral{background:#f97316;}
-.green{background:#22c55e;}
-.dark{background:#0f172a;}
-
-.card h3{font-weight:700;margin-bottom:12px;}
-
-/* FEATURE BOX */
-.feature-wrap{display:flex;justify-content:center;}
-
-.feature-box{
-  max-width:950px;
-  padding:70px 60px;
-  border-radius:32px;
-  background:linear-gradient(135deg,#4f46e5,#06b6d4);
-  color:#fff;
-  box-shadow:0 45px 120px rgba(0,0,0,0.28);
-  text-align:center;
-}
-
-.feature-icon{
-  width:82px;
-  height:82px;
-  margin:0 auto 28px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:36px;
-  background:rgba(255,255,255,0.25);
-  box-shadow:0 18px 50px rgba(0,0,0,0.4), inset 0 -6px 0 rgba(0,0,0,0.3);
-}
-
-/* CONTACT */
-.contact{text-align:center;}
-
-.contact-box{
-  max-width:700px;
-  margin:auto;
-  padding:65px 50px;
-  background:linear-gradient(135deg,#4f46e5,#06b6d4);
-  color:#fff;
-  border-radius:32px;
-  box-shadow:0 45px 120px rgba(0,0,0,0.28);
-}
-
-.contact-number{
-  font-size:22px;
-  margin:28px 0 36px;
-}
-
-/* SOCIAL */
-.socials{
-  display:flex;
-  justify-content:center;
-  gap:28px;
+.card:hover{
+  transform:translateY(-8px);
 }
 
 .icon{
-  width:66px;
-  height:66px;
+  width:70px;
+  height:70px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  background:#2563eb;
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:50%;
-  font-size:28px;
   color:#fff;
-  box-shadow:0 18px 50px rgba(0,0,0,0.45);
+  font-size:28px;
+}
+
+.card h3{
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+/* PROCESS */
+.process-step{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.process-step .icon{
+  flex-shrink:0;
+  background:#0f172a;
+}
+
+/* FEATURE BLOCK */
+.feature{
+  max-width:1000px;
+  margin:auto;
+  background:#0f172a;
+  color:#fff;
+  padding:70px 60px;
+  border-radius:24px;
+  text-align:center;
+}
+
+.feature .icon{
+  background:#2563eb;
+  margin-bottom:24px;
+}
+
+.feature h2{
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.feature p{
+  font-size:18px;
+  color:#e5e7eb;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact-box{
+  max-width:650px;
+  margin:auto;
+  background:#2563eb;
+  color:#fff;
+  padding:60px 40px;
+  border-radius:22px;
+}
+
+.contact-box p{
+  margin:18px 0 28px;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:22px;
+}
+
+.socials a{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#fff;
+  color:#2563eb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  text-decoration:none;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:40px;
+  padding:35px;
   font-size:14px;
   color:#64748b;
 }
 
 /* MOBILE */
 @media(max-width:600px){
-  .hero h1{font-size:38px;}
-  .hero h1 span{font-size:32px;}
+  .hero h1{font-size:36px;}
 }
 </style>
 </head>
@@ -267,7 +248,7 @@ footer{
 <body>
 
 <header>
-  <div class="logo">Agency<span>0.2</span></div>
+  <div class="logo">Agency <span>0.2</span></div>
   <nav>
     <a href="#services">Services</a>
     <a href="#process">Process</a>
@@ -276,27 +257,71 @@ footer{
 </header>
 
 <section class="hero">
-  <h1>
-    Growth-Driven Ads
-    <span>That Actually Convert</span>
-  </h1>
-
-  <div class="hero-highlight">
-    Not Just Ads — But Complete Growth Systems
-  </div>
-
+  <h1>Performance Marketing<br><span>Built for Real Growth</span></h1>
   <p>
-    Meta Ads, Google Ads, high-converting landing pages,
-    posters & videos — all designed to work together as one system.
+    We help businesses grow using Meta Ads, Google Ads,
+    high-converting landing pages, and professional creatives —
+    all working together as one complete system.
   </p>
-
   <div class="cta">
     <a href="https://wa.me/917042139521" target="_blank">Talk on WhatsApp</a>
   </div>
 </section>
 
+<section id="services">
+  <div class="section-title">
+    <h2>What We Do</h2>
+    <p>Everything you need to run profitable ads</p>
+  </div>
+
+  <div class="grid">
+    <div class="card"><div class="icon"><i class="fab fa-facebook-f"></i></div><h3>Meta Ads</h3><p>Lead & sales focused Facebook and Instagram campaigns.</p></div>
+    <div class="card"><div class="icon"><i class="fab fa-google"></i></div><h3>Google Ads</h3><p>Search & YouTube ads for high-intent customers.</p></div>
+    <div class="card"><div class="icon"><i class="fa-solid fa-layer-group"></i></div><h3>Landing Pages</h3><p>Pages built specifically to convert paid traffic.</p></div>
+    <div class="card"><div class="icon"><i class="fa-solid fa-video"></i></div><h3>Creatives</h3><p>Posters, banners & ad videos that stop scrolling.</p></div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="section-title">
+    <h2>How We Work</h2>
+    <p>Simple, transparent, result-oriented</p>
+  </div>
+
+  <div class="grid">
+    <div class="card process-step"><div class="icon"><i class="fa-solid fa-search"></i></div><p>Understand your business and audience</p></div>
+    <div class="card process-step"><div class="icon"><i class="fa-solid fa-bullseye"></i></div><p>Select the right ads platform</p></div>
+    <div class="card process-step"><div class="icon"><i class="fa-solid fa-pen-nib"></i></div><p>Create landing pages & creatives</p></div>
+    <div class="card process-step"><div class="icon"><i class="fa-solid fa-rocket"></i></div><p>Launch, optimize & scale</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="feature">
+    <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+    <h2>Why Businesses Trust Us</h2>
+    <p>
+      We don’t promise overnight results or fake guarantees.
+      We focus on building a strong foundation so your ad spend
+      turns into consistent, measurable growth.
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-box">
+    <h2>Let’s Work Together</h2>
+    <p>📞 7042139521</p>
+    <div class="socials">
+      <a href="https://wa.me/917042139521" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/1BzLw5Cm6W/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  © 2026 Agency0.2 · All Rights Reserved
+  © 2026 Agency 0.2 · All Rights Reserved
 </footer>
 
 </body>
