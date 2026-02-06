@@ -1,327 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agency 0.2 – Performance Marketing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADS Agency 0.2 – Performance Marketing</title>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(180deg,#f4f7fb,#eef2f7,#f4f7fb);
-  color:#0f172a;
-  line-height:1.7;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-/* HEADER */
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255,255,255,0.9);
-  backdrop-filter:blur(10px);
-  padding:18px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #e5e7eb;
-}
+    body {
+      background: linear-gradient(135deg, #f4f7ff, #eef2ff);
+      color: #1a1a1a;
+    }
 
-.logo{
-  font-size:24px;
-  font-weight:800;
-  letter-spacing:1px;
-  color:#1e293b;
-}
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
 
-.logo span{
-  color:#2563eb;
-}
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: #2d5bff;
+      text-shadow: 
+        2px 2px 0 #b3c4ff,
+        4px 4px 0 #8aa5ff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-nav a{
-  margin-left:22px;
-  font-size:14px;
-  font-weight:600;
-  color:#334155;
-  text-decoration:none;
-}
+    .logo i {
+      color: #22c55e;
+      font-size: 26px;
+    }
 
-/* HERO */
-.hero{
-  padding:130px 8% 110px;
-  text-align:center;
-}
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
 
-.hero h1{
-  font-size:54px;
-  font-weight:800;
-  line-height:1.2;
-  color:#0f172a;
-}
+    nav a:hover {
+      color: #2d5bff;
+    }
 
-.hero h1 span{
-  color:#2563eb;
-}
+    /* HERO */
+    .hero {
+      padding: 90px 8%;
+      text-align: center;
+    }
 
-.hero p{
-  max-width:900px;
-  margin:28px auto;
-  font-size:18px;
-  color:#475569;
-}
+    .hero h1 {
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #1a1a1a;
+      text-shadow: 
+        2px 2px 0 #dbe4ff,
+        4px 4px 0 #b9c9ff;
+    }
 
-.cta{
-  margin-top:35px;
-}
+    .hero h1 span {
+      color: #2d5bff;
+    }
 
-.cta a{
-  padding:16px 42px;
-  background:#2563eb;
-  color:#fff;
-  font-weight:700;
-  border-radius:10px;
-  text-decoration:none;
-  box-shadow:0 20px 40px rgba(37,99,235,0.3);
-}
+    .hero h2 {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: 500;
+      color: #444;
+    }
 
-/* SECTION */
-section{
-  padding:100px 8%;
-}
+    .hero p {
+      margin-top: 25px;
+      font-size: 17px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #555;
+    }
 
-.section-title{
-  text-align:center;
-  margin-bottom:70px;
-}
+    .cta-call {
+      margin-top: 40px;
+    }
 
-.section-title h2{
-  font-size:40px;
-  font-weight:800;
-}
+    .cta-call a {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff;
+      padding: 16px 34px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 15px 30px rgba(34,197,94,0.35);
+      display: inline-block;
+    }
 
-.section-title p{
-  margin-top:14px;
-  color:#64748b;
-}
+    .cta-call a i {
+      margin-right: 10px;
+    }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:40px;
-}
+    /* SECTION */
+    section {
+      padding: 90px 8%;
+    }
 
-/* CARD – NEUMORPHIC */
-.card{
-  background:#f8fafc;
-  padding:42px 32px;
-  border-radius:18px;
-  box-shadow:
-    12px 12px 30px #dbe3ec,
-    -12px -12px 30px #ffffff;
-  text-align:center;
-  transition:0.3s;
-}
+    .section-box {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-.card:hover{
-  transform:translateY(-8px);
-}
+    .section-box h3 {
+      display: inline-block;
+      padding: 14px 34px;
+      font-size: 28px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #2d5bff, #7c9cff);
+      color: #fff;
+      border-radius: 50px;
+      box-shadow: 0 12px 25px rgba(45,91,255,0.35);
+    }
 
-.icon{
-  width:70px;
-  height:70px;
-  margin:0 auto 20px;
-  border-radius:50%;
-  background:#2563eb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-  font-size:28px;
-}
+    .section-box p {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #555;
+    }
 
-.card h3{
-  font-weight:700;
-  margin-bottom:12px;
-}
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
 
-/* PROCESS */
-.process-step{
-  display:flex;
-  align-items:flex-start;
-  gap:20px;
-}
+    .card {
+      background: #fff;
+      padding: 35px 30px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
 
-.process-step .icon{
-  flex-shrink:0;
-  background:#0f172a;
-}
+    .card:hover {
+      transform: translateY(-10px);
+    }
 
-/* FEATURE BLOCK */
-.feature{
-  max-width:1000px;
-  margin:auto;
-  background:#0f172a;
-  color:#fff;
-  padding:70px 60px;
-  border-radius:24px;
-  text-align:center;
-}
+    .card i {
+      font-size: 42px;
+      color: #2d5bff;
+      margin-bottom: 20px;
+    }
 
-.feature .icon{
-  background:#2563eb;
-  margin-bottom:24px;
-}
+    .card h4 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
 
-.feature h2{
-  font-size:38px;
-  margin-bottom:20px;
-}
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
 
-.feature p{
-  font-size:18px;
-  color:#e5e7eb;
-}
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      background: linear-gradient(135deg, #2d5bff, #7c9cff);
+      color: #fff;
+      border-radius: 30px;
+      padding: 70px 20px;
+    }
 
-/* CONTACT */
-.contact{
-  text-align:center;
-}
+    .contact h3 {
+      font-size: 36px;
+      font-weight: 700;
+    }
 
-.contact-box{
-  max-width:650px;
-  margin:auto;
-  background:#2563eb;
-  color:#fff;
-  padding:60px 40px;
-  border-radius:22px;
-}
+    .contact p {
+      margin-top: 15px;
+      font-size: 16px;
+    }
 
-.contact-box p{
-  margin:18px 0 28px;
-}
+    .contact-links {
+      margin-top: 35px;
+    }
 
-.socials{
-  display:flex;
-  justify-content:center;
-  gap:22px;
-}
+    .contact-links a {
+      margin: 0 12px;
+      font-size: 22px;
+      color: #fff;
+      text-decoration: none;
+    }
 
-.socials a{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:#fff;
-  color:#2563eb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:26px;
-  text-decoration:none;
-}
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #666;
+    }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:35px;
-  font-size:14px;
-  color:#64748b;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  .hero h1{font-size:36px;}
-}
-</style>
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Agency <span>0.2</span></div>
+  <div class="logo">
+    <i class="fa-solid fa-arrow-trend-up"></i> ADS Agency 0.2
+  </div>
   <nav>
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
+    <a href="#">Services</a>
+    <a href="#">Process</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Performance Marketing<br><span>Built for Real Growth</span></h1>
+  <h1>Performance Marketing <span>Built for Real Growth</span></h1>
+  <h2>Not Just Ads — A Complete Growth System</h2>
+
   <p>
-    We help businesses grow using Meta Ads, Google Ads,
-    high-converting landing pages, and professional creatives —
-    all working together as one complete system.
+    We help businesses grow using <b>Meta Ads</b>, <b>Google Ads</b>,
+    high-converting <b>Landing Pages</b> and professional <b>Creatives</b>.
+    Everything works together as one complete system — no need to go anywhere else.
   </p>
-  <div class="cta">
-    <a href="https://wa.me/917042139521" target="_blank">Talk on WhatsApp</a>
-  </div>
-</section>
 
-<section id="services">
-  <div class="section-title">
-    <h2>What We Do</h2>
-    <p>Everything you need to run profitable ads</p>
-  </div>
-
-  <div class="grid">
-    <div class="card"><div class="icon"><i class="fab fa-facebook-f"></i></div><h3>Meta Ads</h3><p>Lead & sales focused Facebook and Instagram campaigns.</p></div>
-    <div class="card"><div class="icon"><i class="fab fa-google"></i></div><h3>Google Ads</h3><p>Search & YouTube ads for high-intent customers.</p></div>
-    <div class="card"><div class="icon"><i class="fa-solid fa-layer-group"></i></div><h3>Landing Pages</h3><p>Pages built specifically to convert paid traffic.</p></div>
-    <div class="card"><div class="icon"><i class="fa-solid fa-video"></i></div><h3>Creatives</h3><p>Posters, banners & ad videos that stop scrolling.</p></div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="section-title">
-    <h2>How We Work</h2>
-    <p>Simple, transparent, result-oriented</p>
-  </div>
-
-  <div class="grid">
-    <div class="card process-step"><div class="icon"><i class="fa-solid fa-search"></i></div><p>Understand your business and audience</p></div>
-    <div class="card process-step"><div class="icon"><i class="fa-solid fa-bullseye"></i></div><p>Select the right ads platform</p></div>
-    <div class="card process-step"><div class="icon"><i class="fa-solid fa-pen-nib"></i></div><p>Create landing pages & creatives</p></div>
-    <div class="card process-step"><div class="icon"><i class="fa-solid fa-rocket"></i></div><p>Launch, optimize & scale</p></div>
+  <div class="cta-call">
+    <a href="tel:+917042139521">
+      <i class="fa-solid fa-phone"></i> Book Free Strategy Call
+    </a>
   </div>
 </section>
 
 <section>
-  <div class="feature">
-    <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
-    <h2>Why Businesses Trust Us</h2>
-    <p>
-      We don’t promise overnight results or fake guarantees.
-      We focus on building a strong foundation so your ad spend
-      turns into consistent, measurable growth.
-    </p>
+  <div class="section-box">
+    <h3>What We Do</h3>
+    <p>Everything you need to run profitable ads</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <i class="fa-brands fa-facebook"></i>
+      <h4>Meta Ads</h4>
+      <p>Lead & sales focused Facebook and Instagram campaigns.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-brands fa-google"></i>
+      <h4>Google Ads</h4>
+      <p>Search & YouTube ads for high-intent customers.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-layer-group"></i>
+      <h4>Landing Pages</h4>
+      <p>High-converting professional landing pages built for ads.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-video"></i>
+      <h4>Creatives</h4>
+      <p>Posters, banners & videos that stop scrolling.</p>
+    </div>
   </div>
 </section>
 
-<section id="contact" class="contact">
-  <div class="contact-box">
-    <h2>Let’s Work Together</h2>
-    <p>📞 7042139521</p>
-    <div class="socials">
-      <a href="https://wa.me/917042139521" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/share/1BzLw5Cm6W/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<section>
+  <div class="section-box">
+    <h3>How We Work</h3>
+    <p>Simple · Transparent · Result-Oriented</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <i class="fa-solid fa-magnifying-glass-chart"></i>
+      <h4>Understand Business</h4>
+      <p>We study your business, market and audience deeply.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-bullseye"></i>
+      <h4>Select Right Platform</h4>
+      <p>Choosing Meta or Google based on your goals.</p>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-rocket"></i>
+      <h4>Launch & Scale</h4>
+      <p>Create, launch, optimize and scale campaigns.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="contact">
+    <h3>Let’s Work Together</h3>
+    <p>Ready to grow your business with a real performance system?</p>
+
+    <div class="contact-links">
+      <a href="https://wa.me/917042139521"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2026 Agency 0.2 · All Rights Reserved
+  © 2026 ADS Agency 0.2 — Performance Marketing for Real Growth
 </footer>
 
 </body>
