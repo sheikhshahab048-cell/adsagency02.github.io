@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ads Growth Agency</title>
+<title>Ads & Growth Agency</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -13,73 +14,88 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Inter',sans-serif;
 }
 
 body{
-  background:linear-gradient(180deg,#0b0f16,#02040a);
-  color:#e5e7eb;
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#0f172a;
+  line-height:1.7;
 }
 
 /* HEADER */
 header{
-  position:fixed;
-  width:100%;
+  position:sticky;
   top:0;
+  background:#ffffffcc;
+  backdrop-filter:blur(8px);
   padding:18px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:rgba(2,4,10,0.75);
-  backdrop-filter:blur(10px);
+  border-bottom:1px solid #e5e7eb;
   z-index:100;
 }
 
-header h1{
+/* 3D LOGO */
+.logo{
+  font-size:26px;
   font-weight:800;
-  color:#7dd3fc;
+  letter-spacing:1px;
+  color:#2563eb;
+  text-shadow:
+    1px 1px 0 #c7d2fe,
+    2px 2px 0 #a5b4fc,
+    3px 3px 0 #818cf8;
 }
 
 nav a{
   margin-left:24px;
-  color:#cbd5f5;
   font-size:14px;
+  font-weight:600;
+  color:#334155;
 }
 
 /* HERO */
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:120px 8% 60px;
+  padding:120px 8% 80px;
   text-align:center;
+  background:linear-gradient(180deg,#ffffff,#f1f5f9);
 }
 
-.hero-box{
-  max-width:900px;
-}
-
-.hero h2{
-  font-size:44px;
+.hero h1{
+  font-size:48px;
   font-weight:800;
-  margin-bottom:18px;
+}
+
+.hero h1 span{
+  color:#2563eb;
 }
 
 .hero p{
+  max-width:900px;
+  margin:25px auto;
   font-size:18px;
-  color:#cbd5f5;
+  color:#475569;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:28px;
-  padding:14px 32px;
-  border-radius:10px;
-  background:#38bdf8;
-  color:#020617;
+.hero em{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  color:#0f172a;
+}
+
+.cta{
+  margin-top:35px;
+}
+
+.cta a{
+  padding:14px 30px;
+  background:#2563eb;
+  color:#fff;
   font-weight:700;
-  box-shadow:0 8px 25px rgba(56,189,248,0.35);
+  border-radius:8px;
+  display:inline-block;
 }
 
 /* SECTIONS */
@@ -89,81 +105,96 @@ section{
 
 .section-title{
   text-align:center;
-  margin-bottom:60px;
+  margin-bottom:70px;
 }
 
-.section-title h3{
-  font-size:34px;
+.section-title h2{
+  font-size:38px;
   font-weight:800;
+}
+
+.section-title p{
+  margin-top:15px;
+  color:#64748b;
+  font-style:italic;
 }
 
 /* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  gap:40px;
 }
 
 .card{
-  background:#020617;
-  padding:30px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.04);
+  background:#fff;
+  padding:35px;
+  border-radius:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
 }
 
 .card i{
-  font-size:26px;
-  color:#38bdf8;
-  margin-bottom:14px;
+  font-size:32px;
+  color:#2563eb;
+  margin-bottom:15px;
 }
 
-.card h4{
-  margin-bottom:8px;
+.card h3{
   font-weight:700;
+  margin-bottom:10px;
 }
 
 /* PROCESS */
 .process{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
+  gap:30px;
 }
 
 .step{
-  padding:24px;
-  background:#020617;
-  border-radius:14px;
+  background:#fff;
+  padding:30px;
+  border-left:6px solid #2563eb;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* TRUST */
+.trust{
+  background:#f1f5f9;
+  text-align:center;
+}
+
+.trust p{
+  max-width:900px;
+  margin:auto;
+  font-size:18px;
+  font-weight:500;
 }
 
 /* CONTACT */
 .contact{
+  background:#fff;
   text-align:center;
-  background:#020617;
 }
 
 .socials a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:54px;
-  height:54px;
-  margin:10px;
-  border-radius:50%;
-  background:#020617;
-  border:1px solid rgba(255,255,255,0.08);
-  color:#38bdf8;
+  margin:0 12px;
+  font-size:24px;
+  color:#2563eb;
 }
 
 /* FOOTER */
 footer{
-  padding:30px;
   text-align:center;
+  padding:35px;
+  background:#f1f5f9;
   font-size:14px;
-  opacity:0.6;
+  color:#64748b;
 }
 
+/* MOBILE */
 @media(max-width:600px){
-  .hero h2{font-size:32px;}
+  .hero h1{font-size:34px;}
 }
 </style>
 </head>
@@ -171,53 +202,98 @@ footer{
 <body>
 
 <header>
-  <h1>Ads Growth Agency</h1>
+  <div class="logo">ADS GROWTH AGENCY</div>
   <nav>
     <a href="#services">Services</a>
     <a href="#process">Process</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-box">
-    <h2>We Build Ad Systems That Convert — Not Just Look Good</h2>
-    <p>Meta Ads, Google Ads, landing pages & creatives built with one goal: real business growth.</p>
-    <a class="btn" href="https://wa.me/917042139521" target="_blank">Talk on WhatsApp</a>
+  <h1>We Build <span>Complete Growth Systems</span></h1>
+  <em>Not just ads — but everything that converts</em>
+  <p>
+    We help businesses grow using <b>Meta Ads</b>, <b>Google Ads</b>,
+    high-converting <b>landing pages</b> and professional <b>posters & videos</b>.
+    Everything is designed to work together as one system.
+  </p>
+  <div class="cta">
+    <a href="https://wa.me/917042139521" target="_blank">Talk on WhatsApp</a>
   </div>
 </section>
 
 <section id="services">
-  <div class="section-title"><h3>Our Core Services</h3></div>
+  <div class="section-title">
+    <h2>Everything We Provide — At One Place</h2>
+    <p>No need to hire multiple people or agencies</p>
+  </div>
+
   <div class="grid">
-    <div class="card"><i class="fab fa-facebook"></i><h4>Meta Ads</h4><p>Lead & sales-focused Facebook and Instagram campaigns.</p></div>
-    <div class="card"><i class="fab fa-google"></i><h4>Google Ads</h4><p>Search & YouTube ads for high-intent users.</p></div>
-    <div class="card"><i class="fa-solid fa-layer-group"></i><h4>Landing Pages</h4><p>Fast, mobile-first, conversion-optimized pages.</p></div>
-    <div class="card"><i class="fa-solid fa-video"></i><h4>Creatives</h4><p>Professional posters & ad videos.</p></div>
+    <div class="card"><i class="fab fa-facebook"></i><h3>Meta Ads</h3><p>Facebook & Instagram ads focused on leads and sales.</p></div>
+    <div class="card"><i class="fab fa-google"></i><h3>Google Ads</h3><p>Search & YouTube ads for high-intent customers.</p></div>
+    <div class="card"><i class="fa-solid fa-layer-group"></i><h3>Landing Pages</h3><p>Custom landing pages built only for conversions.</p></div>
+    <div class="card"><i class="fa-solid fa-image"></i><h3>Posters & Creatives</h3><p>Professional ad creatives that stop scrolling.</p></div>
+    <div class="card"><i class="fa-solid fa-video"></i><h3>Ad Videos & Reels</h3><p>Short promotional videos designed for ads.</p></div>
+    <div class="card"><i class="fa-solid fa-chart-line"></i><h3>Strategy & Scaling</h3><p>Right platform, right budget, right funnel.</p></div>
   </div>
 </section>
 
 <section id="process">
-  <div class="section-title"><h3>How We Work</h3></div>
+  <div class="section-title">
+    <h2>Our Working Process</h2>
+    <p>Clear, transparent, result-oriented</p>
+  </div>
+
   <div class="process">
-    <div class="step">1️⃣ Understand your business & goals</div>
-    <div class="step">2️⃣ Choose the right ad platform</div>
-    <div class="step">3️⃣ Build landing page & creatives</div>
-    <div class="step">4️⃣ Launch, track & optimize</div>
+    <div class="step">Understand your business & audience</div>
+    <div class="step">Choose correct ads platform</div>
+    <div class="step">Design landing page & creatives</div>
+    <div class="step">Launch, track & optimize continuously</div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="section-title"><h3>Contact Us</h3></div>
-  <p>📞 7042139521</p>
+<section class="trust">
+  <div class="section-title">
+    <h2>Why Businesses Trust Us</h2>
+  </div>
+  <p>
+    We don’t promise overnight results or fake guarantees.
+    We focus on building a strong foundation —
+    so your ads, landing page and creatives work together for long-term growth.
+  </p>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <h2>About Our Agency</h2>
+    <p>Built with clarity, not shortcuts</p>
+  </div>
+
+  <p style="max-width:900px;margin:auto;text-align:center;">
+    Our agency was created to solve one problem:
+    businesses wasting money on ads without a proper system.
+    We believe ads alone don’t work —
+    <b>the system behind ads does</b>.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+  </div>
+  <p><b>📞 7042139521</b></p>
   <div class="socials">
     <a href="https://wa.me/917042139521" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/share/1BzLw5Cm6W/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.facebook.com/share/1BzLw5Cm6W/" target="_blank"><i class="fab fa-facebook"></i></a>
   </div>
 </section>
 
-<footer>© 2026 Ads Growth Agency</footer>
+<footer>
+  © 2026 Ads Growth Agency
+</footer>
 
 </body>
 </html>
