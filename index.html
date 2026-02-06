@@ -1,248 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Ads Agency 0.2 | Performance Growth System</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ads & Growth Agency</title>
 
-<meta name="description" content="Ads Agency 0.2 helps businesses generate leads and sales using Meta Ads, Google Ads and high-converting landing pages.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
 
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  color:#e5e7eb;
-  background:linear-gradient(135deg,#020617,#0b1228,#020617);
-  line-height:1.7;
-}
-section{padding:110px 20px}
-.container{max-width:1200px;margin:auto}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:
-    radial-gradient(800px 300px at 15% 15%,rgba(56,189,248,.18),transparent),
-    radial-gradient(700px 300px at 85% 20%,rgba(34,197,94,.18),transparent);
-}
-.hero h1{
-  font-size:70px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-shadow:0 15px 40px rgba(0,0,0,.8);
-}
-.hero h1 span{color:#38bdf8}
-.hero p{
-  max-width:900px;
-  margin:30px auto 0;
-  font-size:20px;
-  color:#9ca3af;
-}
-.cta{
-  display:inline-block;
-  margin-top:50px;
-  padding:22px 58px;
-  font-size:20px;
-  font-weight:700;
-  color:#022c22;
-  background:linear-gradient(135deg,#22c55e,#4ade80);
-  border-radius:18px;
-  box-shadow:0 12px 0 #15803d,0 30px 90px rgba(0,0,0,.85);
-  transition:.3s;
-}
-.cta:hover{transform:translateY(-6px)}
+    header {
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #020617;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-/* TITLES */
-.title{
-  font-size:44px;
-  text-align:center;
-  margin-bottom:15px;
-}
-.sub{
-  max-width:900px;
-  margin:0 auto 70px;
-  text-align:center;
-  color:#9ca3af;
-  font-size:18px;
-}
+    header h1 {
+      font-size: 20px;
+      color: #38bdf8;
+    }
 
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:34px;
-}
-.card{
-  background:linear-gradient(180deg,#020617,#020617);
-  border:1px solid #1e293b;
-  border-radius:26px;
-  padding:42px;
-  box-shadow:0 40px 100px rgba(0,0,0,.8);
-  transition:.35s;
-}
-.card:hover{transform:translateY(-14px)}
-.icon{
-  width:68px;height:68px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#38bdf8,#22c55e);
-  margin-bottom:22px;
-}
+    nav a {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #cbd5f5;
+    }
 
-/* TRUST */
-.highlight{
-  font-size:26px;
-  font-weight:700;
-  text-align:center;
-  color:#38bdf8;
-  margin:40px auto;
-}
+    nav a:hover {
+      color: #38bdf8;
+    }
 
-/* CONTACT */
-.contact{
-  background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(34,197,94,.12));
-  text-align:center;
-}
+    .hero {
+      padding: 80px 8%;
+      text-align: center;
+    }
 
-/* FOOTER */
-footer{
-  background:#020617;
-  padding:45px 20px;
-  text-align:center;
-  color:#9ca3af;
-}
-</style>
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #cbd5f5;
+      font-size: 16px;
+    }
+
+    .btn-group {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 28px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cbd5f5;
+    }
+
+    .cta {
+      background: #020617;
+      text-align: center;
+      padding: 60px 8%;
+    }
+
+    .cta h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      padding: 40px 8%;
+      background: #020617;
+      text-align: center;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    @media(max-width: 600px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<header>
+  <h1>Ads Growth Agency</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#industries">Industries</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
 <section class="hero">
-  <div class="container">
-    <h1>ADS AGENCY <span>0.2</span></h1>
+  <h2>We Build Complete Ad-to-Conversion Systems</h2>
+  <p>
+    Meta Ads, Google Ads, high-converting landing pages, and professional creatives —
+    everything your business needs to generate quality leads and sales.
+  </p>
+
+  <div class="btn-group">
+    <a class="btn" href="https://wa.me/917042139521" target="_blank">WhatsApp Us</a>
+    <a class="btn secondary" href="#contact">Free Strategy Call</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-title">
+    <h3>Our Services</h3>
+    <p>End-to-end growth focused solutions</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h4>Meta Ads Management</h4>
+      <p>Facebook & Instagram ads focused on lead generation, sales, and brand growth.</p>
+    </div>
+
+    <div class="card">
+      <h4>Google Ads Management</h4>
+      <p>Search, Display & YouTube ads for high-intent customers.</p>
+    </div>
+
+    <div class="card">
+      <h4>High-Converting Landing Pages</h4>
+      <p>Fast, mobile-optimized landing pages designed only for conversions.</p>
+    </div>
+
+    <div class="card">
+      <h4>Creatives & Videos</h4>
+      <p>Professional posters, banners, reels, and promotional videos.</p>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="section-title">
+    <h3>Industries We Work With</h3>
+  </div>
+
+  <div class="grid">
+    <div class="card"><p>Real Estate</p></div>
+    <div class="card"><p>Coaching & Education</p></div>
+    <div class="card"><p>Local Services</p></div>
+    <div class="card"><p>E-commerce</p></div>
+    <div class="card"><p>Healthcare</p></div>
+    <div class="card"><p>Startups & Small Businesses</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <h3>About Us</h3>
+  </div>
+
+  <div class="card">
     <p>
-      We help businesses generate consistent leads and sales using
-      Meta Ads, Google Ads, and conversion-focused landing pages —
-      without hiring an in-house marketing team.
-    </p>
-    <a class="cta" href="https://wa.me/917042139521">Book WhatsApp Strategy Call</a>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section>
-  <div class="container">
-    <h2 class="title">What We Handle For You</h2>
-    <p class="sub">
-      You focus on your business. We handle traffic, leads, and optimization.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Meta Ads</h3>
-        <p>Lead & sales campaigns optimized for scale and profitability.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Google Ads</h3>
-        <p>High-intent search ads targeting ready-to-buy customers.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Landing Pages</h3>
-        <p>High-conversion pages built and optimized by our team.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Ad Creatives</h3>
-        <p>Videos, images and posters designed to stop the scroll.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY ADS -->
-<section>
-  <div class="container">
-    <h2 class="title">Why Paid Ads Matter</h2>
-
-    <p class="highlight">
-      If you are not advertising, your competitors are.
-    </p>
-
-    <p class="sub">
-      Paid ads put your business directly in front of people who are already
-      searching or interested — faster, measurable and scalable.
+      We are a performance-focused ads agency helping businesses grow using the right
+      platform, strategy, landing pages, and creatives.
+      <br><br>
+      We don’t believe in copy-paste campaigns or fake promises —
+      only structured systems that convert.
     </p>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section>
-  <div class="container">
-    <h2 class="title">Our Execution System</h2>
-    <p class="sub">Simple. Structured. Performance-focused.</p>
+<section id="contact" class="cta">
+  <h3>Let’s Grow Your Business</h3>
+  <p>Contact us for a free strategy discussion</p>
+  <br>
+  <p><strong>📞 Phone / WhatsApp:</strong> 7042139521</p>
+  <br>
 
-    <div class="cards">
-      <div class="card"><h3>1. Strategy Call</h3><p>Understanding your offer & market.</p></div>
-      <div class="card"><h3>2. Creative Production</h3><p>Ads & content creation.</p></div>
-      <div class="card"><h3>3. Funnel Setup</h3><p>Landing page + tracking.</p></div>
-      <div class="card"><h3>4. Ads Launch</h3><p>Meta & Google campaigns.</p></div>
-      <div class="card"><h3>5. Optimization</h3><p>Daily testing and scaling.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- QUALIFICATION -->
-<section>
-  <div class="container">
-    <h2 class="title">Is This Right For You?</h2>
-
-    <div class="cards">
-      <div class="card">
-        <h3>✅ Good Fit</h3>
-        <p>
-          Businesses investing ₹15k+/month in ads<br>
-          Serious about growth<br>
-          Want leads & ROI
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>❌ Not For</h3>
-        <p>
-          No ad budget<br>
-          Looking for guarantees<br>
-          Expect instant results
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact">
-  <div class="container">
-    <h2 class="title">Let’s Grow Your Business</h2>
-    <p class="sub">One team. One system. Real results.</p>
-
-    <a class="cta" href="https://wa.me/917042139521">Start WhatsApp Conversation</a>
+  <div class="socials">
+    <a href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/share/1BzLw5Cm6W/" target="_blank">Facebook</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Ads Agency 0.2 • All Rights Reserved
+  © 2026 Ads Growth Agency · All Rights Reserved
 </footer>
 
 </body>
 </html>
+
