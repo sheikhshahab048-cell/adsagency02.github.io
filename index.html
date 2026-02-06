@@ -14,7 +14,7 @@
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#f8fafc;
+  background:linear-gradient(180deg,#eef2ff,#f8fafc,#eef2ff);
   color:#0f172a;
   line-height:1.7;
 }
@@ -23,8 +23,8 @@ body{
 header{
   position:sticky;
   top:0;
-  background:#ffffffcc;
-  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(10px);
   padding:18px 8%;
   display:flex;
   justify-content:space-between;
@@ -33,16 +33,13 @@ header{
   z-index:100;
 }
 
-/* 3D LOGO */
+/* LOGO */
 .logo{
   font-size:26px;
   font-weight:800;
   letter-spacing:1px;
   color:#2563eb;
-  text-shadow:
-    1px 1px 0 #c7d2fe,
-    2px 2px 0 #a5b4fc,
-    3px 3px 0 #818cf8;
+  text-shadow:2px 2px 0 #c7d2fe, 4px 4px 0 #a5b4fc;
 }
 
 nav a{
@@ -57,7 +54,6 @@ nav a{
 .hero{
   padding:120px 8% 90px;
   text-align:center;
-  background:linear-gradient(180deg,#ffffff,#f1f5f9);
 }
 
 .hero h1{
@@ -68,15 +64,15 @@ nav a{
 .hero h1 span{color:#2563eb;}
 
 .hero-highlight{
-  margin:28px auto;
+  margin:30px auto;
   display:inline-block;
-  padding:14px 30px;
+  padding:16px 34px;
   font-family:'Playfair Display',serif;
   font-size:22px;
   font-style:italic;
-  background:#ffffff;
-  border-radius:14px;
-  box-shadow:0 20px 45px rgba(0,0,0,0.12);
+  background:rgba(255,255,255,0.9);
+  border-radius:16px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
 }
 
 .hero p{
@@ -89,12 +85,13 @@ nav a{
 .cta a{
   margin-top:30px;
   display:inline-block;
-  padding:14px 34px;
+  padding:14px 36px;
   background:#2563eb;
   color:#fff;
   font-weight:700;
-  border-radius:8px;
+  border-radius:10px;
   text-decoration:none;
+  box-shadow:0 15px 35px rgba(37,99,235,0.35);
 }
 
 /* SECTIONS */
@@ -120,25 +117,49 @@ section{padding:95px 8%;}
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:40px;
+  gap:45px;
 }
 
+/* SERVICE CARD */
 .card{
-  background:#fff;
-  padding:35px;
-  border-radius:16px;
-  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+  background:rgba(255,255,255,0.95);
+  padding:45px 35px 40px;
+  border-radius:20px;
+  box-shadow:0 30px 70px rgba(0,0,0,0.12);
+  text-align:center;
+  transition:0.35s;
 }
 
-.card i{
-  font-size:32px;
-  color:#2563eb;
-  margin-bottom:15px;
+.card:hover{
+  transform:translateY(-10px);
 }
+
+/* 3D ICON */
+.service-icon{
+  width:70px;
+  height:70px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  color:#fff;
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.25),
+    inset 0 -4px 0 rgba(0,0,0,0.25);
+}
+
+.blue{background:#2563eb;}
+.red{background:#ea4335;}
+.purple{background:#7c3aed;}
+.orange{background:#f97316;}
+.green{background:#22c55e;}
+.dark{background:#0f172a;}
 
 .card h3{
   font-weight:700;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 /* PROCESS */
@@ -149,15 +170,16 @@ section{padding:95px 8%;}
 }
 
 .step{
-  background:#fff;
-  padding:30px;
+  background:rgba(255,255,255,0.95);
+  padding:32px;
   border-left:6px solid #2563eb;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  box-shadow:0 20px 45px rgba(0,0,0,0.12);
+  border-radius:14px;
 }
 
 /* TRUST */
 .trust{
-  background:#f1f5f9;
+  background:rgba(255,255,255,0.6);
   text-align:center;
 }
 
@@ -169,15 +191,17 @@ section{padding:95px 8%;}
 }
 
 /* CONTACT */
-.contact{background:#fff;text-align:center;}
+.contact{
+  text-align:center;
+}
 
 .contact-box{
   max-width:650px;
   margin:auto;
-  padding:50px 40px;
-  background:#ffffff;
-  border-radius:20px;
-  box-shadow:0 25px 60px rgba(0,0,0,0.12);
+  padding:55px 40px;
+  background:rgba(255,255,255,0.95);
+  border-radius:24px;
+  box-shadow:0 35px 80px rgba(0,0,0,0.18);
 }
 
 .contact-text{
@@ -191,29 +215,27 @@ section{padding:95px 8%;}
   margin-bottom:30px;
 }
 
-/* 3D SOCIAL ICONS */
+/* SOCIAL ICONS */
 .socials{
   display:flex;
   justify-content:center;
-  gap:22px;
+  gap:24px;
 }
 
 .icon{
-  width:60px;
-  height:60px;
+  width:62px;
+  height:62px;
   display:flex;
   align-items:center;
   justify-content:center;
   border-radius:50%;
   font-size:26px;
   color:#fff;
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.25),
-    inset 0 -4px 0 rgba(0,0,0,0.2);
+  box-shadow:0 12px 30px rgba(0,0,0,0.3);
   transition:0.3s;
 }
 
-.icon:hover{transform:translateY(-6px);}
+.icon:hover{transform:translateY(-8px);}
 
 .whatsapp{background:#25D366;}
 .insta{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
@@ -223,7 +245,6 @@ section{padding:95px 8%;}
 footer{
   text-align:center;
   padding:35px;
-  background:#f1f5f9;
   font-size:14px;
   color:#64748b;
 }
@@ -255,9 +276,8 @@ footer{
   </div>
 
   <p>
-    We help businesses grow using <b>Meta Ads</b>, <b>Google Ads</b>,
-    high-converting <b>landing pages</b> and professional
-    <b>posters & videos</b> — all working together as one system.
+    Meta Ads, Google Ads, high-converting landing pages and professional
+    posters & videos — all working together as one system.
   </p>
 
   <div class="cta">
@@ -268,30 +288,30 @@ footer{
 <section id="services">
   <div class="section-title">
     <h2>Everything We Provide — At One Place</h2>
-    <p>No need to hire multiple people or agencies</p>
+    <p>Complete ads + creative + landing page solution</p>
   </div>
 
   <div class="grid">
-    <div class="card"><i class="fab fa-facebook"></i><h3>Meta Ads</h3><p>Facebook & Instagram ads focused on leads and sales.</p></div>
-    <div class="card"><i class="fab fa-google"></i><h3>Google Ads</h3><p>Search & YouTube ads for high-intent customers.</p></div>
-    <div class="card"><i class="fa-solid fa-layer-group"></i><h3>Landing Pages</h3><p>Custom landing pages built only for conversions.</p></div>
-    <div class="card"><i class="fa-solid fa-image"></i><h3>Posters & Creatives</h3><p>Professional ad creatives that stop scrolling.</p></div>
-    <div class="card"><i class="fa-solid fa-video"></i><h3>Ad Videos & Reels</h3><p>Short promotional videos designed for ads.</p></div>
-    <div class="card"><i class="fa-solid fa-chart-line"></i><h3>Strategy & Scaling</h3><p>Right platform, right budget, right funnel.</p></div>
+    <div class="card"><div class="service-icon blue"><i class="fab fa-facebook"></i></div><h3>Meta Ads</h3><p>Facebook & Instagram ads for leads & sales.</p></div>
+    <div class="card"><div class="service-icon red"><i class="fab fa-google"></i></div><h3>Google Ads</h3><p>Search & YouTube ads for high-intent users.</p></div>
+    <div class="card"><div class="service-icon purple"><i class="fa-solid fa-layer-group"></i></div><h3>Landing Pages</h3><p>Custom pages built only to convert traffic.</p></div>
+    <div class="card"><div class="service-icon orange"><i class="fa-solid fa-image"></i></div><h3>Posters & Creatives</h3><p>Scroll-stopping professional designs.</p></div>
+    <div class="card"><div class="service-icon green"><i class="fa-solid fa-video"></i></div><h3>Ad Videos & Reels</h3><p>Short videos optimised for ads.</p></div>
+    <div class="card"><div class="service-icon dark"><i class="fa-solid fa-chart-line"></i></div><h3>Strategy & Scaling</h3><p>Right platform, budget & funnel planning.</p></div>
   </div>
 </section>
 
 <section id="process">
   <div class="section-title">
     <h2>Our Working Process</h2>
-    <p>Clear, transparent, result-oriented</p>
+    <p>Simple, transparent & effective</p>
   </div>
 
   <div class="process">
-    <div class="step">Understand your business & audience</div>
-    <div class="step">Choose the correct ads platform</div>
-    <div class="step">Design landing page & creatives</div>
-    <div class="step">Launch, track & optimize continuously</div>
+    <div class="step">Understand your business & goals</div>
+    <div class="step">Select the right ads platform</div>
+    <div class="step">Build landing page & creatives</div>
+    <div class="step">Launch, track & optimise continuously</div>
   </div>
 </section>
 
@@ -300,34 +320,29 @@ footer{
     <h2>Why Businesses Trust Us</h2>
   </div>
   <p>
-    We don’t promise overnight results or fake guarantees.
-    We focus on building a strong foundation —
-    so your ads, landing pages and creatives work together for long-term growth.
+    We don’t sell fake promises or shortcuts.
+    We build systems that work today and scale tomorrow.
   </p>
 </section>
 
 <section id="about">
   <div class="section-title">
     <h2>About Our Agency</h2>
-    <p>Built with clarity, not shortcuts</p>
+    <p>Built for long-term growth, not short-term hype</p>
   </div>
 
   <p style="max-width:900px;margin:auto;text-align:center;">
-    Our agency was created to solve one core problem:
-    businesses wasting money on ads without a proper system.
-    We believe ads alone don’t work —
-    <b>the system behind ads does</b>.
+    Ads alone don’t grow businesses.
+    A proper system does — and that’s exactly what we build.
   </p>
 </section>
 
 <section id="contact" class="contact">
   <div class="contact-box">
     <h2>Contact Us</h2>
-    <p class="contact-text">Let’s discuss how we can grow your business.</p>
+    <p class="contact-text">Let’s discuss your business growth.</p>
 
-    <div class="contact-number">
-      📞 <strong>7042139521</strong>
-    </div>
+    <div class="contact-number">📞 <strong>7042139521</strong></div>
 
     <div class="socials">
       <a class="icon whatsapp" href="https://wa.me/917042139521" target="_blank"><i class="fab fa-whatsapp"></i></a>
