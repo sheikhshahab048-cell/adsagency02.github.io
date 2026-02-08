@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ads & Growth Agency</title>
+<title>Ads Agency</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root{
   --primary:#2563eb;
   --secondary:#22c55e;
@@ -14,7 +16,8 @@
   --text:#0f172a;
   --muted:#64748b;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
 body{
   background:linear-gradient(180deg,#f8fafc,#eef2ff);
   color:var(--text);
@@ -30,8 +33,9 @@ header{
   box-shadow:0 10px 30px rgba(0,0,0,.08);
   position:sticky;
   top:0;
+  z-index:100;
 }
-header h2{color:var(--primary)}
+header h2{color:var(--primary);font-weight:700}
 nav a{
   margin-left:20px;
   text-decoration:none;
@@ -45,17 +49,23 @@ nav a:hover{color:var(--primary)}
   padding:90px 8%;
   text-align:center;
 }
-.hero h1{font-size:44px;margin-bottom:15px}
+.hero h1{
+  font-size:46px;
+  font-weight:700;
+}
+.hero span{
+  color:var(--primary);
+}
 .hero p{
-  max-width:760px;
-  margin:auto;
+  max-width:780px;
+  margin:15px auto;
   color:var(--muted);
   font-size:18px;
 }
 .btn{
   display:inline-block;
   margin-top:30px;
-  padding:14px 36px;
+  padding:15px 40px;
   border-radius:40px;
   background:linear-gradient(135deg,#2563eb,#22c55e);
   color:#fff;
@@ -64,36 +74,44 @@ nav a:hover{color:var(--primary)}
   box-shadow:0 18px 40px rgba(37,99,235,.35);
 }
 
-/* SECTIONS */
+/* SECTION */
 section{padding:80px 8%}
 .title{text-align:center;margin-bottom:50px}
-.title h2{font-size:34px}
+.title h2{font-size:36px;font-weight:700}
 .title p{color:var(--muted);margin-top:8px}
 
-/* 3D CARDS */
+/* 3D BOXES */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 .card{
   background:var(--card);
-  padding:30px;
+  padding:32px;
   border-radius:22px;
   box-shadow:0 15px 40px rgba(0,0,0,.12);
   transition:.4s cubic-bezier(.175,.885,.32,1.275);
 }
 .card:hover{
-  transform:translateY(-12px) scale(1.03);
+  transform:translateY(-12px) scale(1.04);
   box-shadow:0 30px 80px rgba(37,99,235,.35);
 }
-.card h3{color:var(--primary);margin-bottom:10px}
-.card p{color:var(--muted);font-size:15px}
+.card h3{
+  color:var(--primary);
+  margin-bottom:12px;
+  font-size:20px;
+  font-weight:700;
+}
+.card p{
+  color:var(--muted);
+  font-size:15px;
+}
 
-/* CONTACT */
+/* CONTACT BAR */
 .contact-bar{
   background:#fff;
-  padding:25px;
+  padding:30px;
   border-radius:22px;
   display:flex;
   justify-content:space-around;
@@ -104,13 +122,34 @@ section{padding:80px 8%}
 .contact-bar a{
   text-decoration:none;
   color:#fff;
-  padding:12px 26px;
-  border-radius:30px;
+  padding:14px 32px;
+  border-radius:40px;
   font-weight:600;
 }
 .whatsapp{background:#25d366}
 .insta{background:#e1306c}
 .fb{background:#1877f2}
+
+/* FLOATING CALL BUTTON */
+.call-float{
+  position:fixed;
+  right:20px;
+  bottom:30px;
+  background:#22c55e;
+  color:#fff;
+  padding:16px 20px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+  box-shadow:0 15px 40px rgba(34,197,94,.6);
+  animation:pulse 1.8s infinite;
+  z-index:999;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}
+  70%{box-shadow:0 0 0 20px rgba(34,197,94,0)}
+  100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}
+}
 
 /* FOOTER */
 footer{
@@ -130,7 +169,7 @@ footer{
 <body>
 
 <header>
-  <h2>YourBrand</h2>
+  <h2>AdsAgency</h2>
   <nav>
     <a href="#services">Services</a>
     <a href="#results">Results</a>
@@ -139,77 +178,58 @@ footer{
 </header>
 
 <section class="hero">
-  <h1>Google Ads, Meta Ads & Landing Pages That Convert</h1>
-  <p>We help businesses generate quality leads with high-performing ads and conversion-focused landing pages.</p>
-  <a href="#contact" class="btn">Start Now</a>
+  <h1><span>GOOGLE ADS</span>, <span>META ADS</span> &<br> High-Converting Landing Pages</h1>
+  <p>We help businesses generate quality leads with performance-driven ads and premium landing pages.</p>
+  <a href="#contact" class="btn">Get Started</a>
 </section>
 
 <section id="services">
   <div class="title">
-    <h2>Our Services</h2>
-    <p>Everything required for online growth</p>
+    <h2>OUR SERVICES</h2>
+    <p>Complete advertising & growth solutions</p>
   </div>
-  <div class="grid">
-    <div class="card"><h3>Google Ads</h3><p>Search & Performance Max campaigns for high-intent leads.</p></div>
-    <div class="card"><h3>Meta Ads</h3><p>Facebook & Instagram ads optimised for conversions.</p></div>
-    <div class="card"><h3>Landing Pages</h3><p>Fast, mobile-first pages designed to convert.</p></div>
-    <div class="card"><h3>Lead Generation</h3><p>Targeted strategy to bring genuine leads.</p></div>
-    <div class="card"><h3>Ads Optimization</h3><p>Daily monitoring, testing & scaling.</p></div>
-    <div class="card"><h3>Tracking Setup</h3><p>Pixel, conversion tracking & analytics.</p></div>
-  </div>
-</section>
 
-<section>
-  <div class="title">
-    <h2>Why Clients Trust Us</h2>
-  </div>
   <div class="grid">
-    <div class="card">✔ Transparent Process</div>
-    <div class="card">✔ Budget Focused Strategy</div>
-    <div class="card">✔ Fast Support</div>
-    <div class="card">✔ Long Term Growth</div>
+    <div class="card"><h3>GOOGLE ADS</h3><p>Search, Display & Performance Max campaigns for high-intent traffic.</p></div>
+    <div class="card"><h3>META ADS</h3><p>Facebook & Instagram ads designed for conversions.</p></div>
+    <div class="card"><h3>LANDING PAGE DESIGN</h3><p>Fast, mobile-first landing pages that convert clicks into leads.</p></div>
+    <div class="card"><h3>LEAD GENERATION</h3><p>Targeted strategy to bring genuine and interested leads.</p></div>
+    <div class="card"><h3>ADS OPTIMIZATION</h3><p>Daily monitoring, testing & ROI scaling.</p></div>
+    <div class="card"><h3>TRACKING SETUP</h3><p>Google Tag, Pixel & conversion tracking.</p></div>
   </div>
 </section>
 
 <section id="results">
   <div class="title">
-    <h2>Our Results</h2>
-    <p>Real performance, not fake promises</p>
+    <h2>PROVEN RESULTS</h2>
   </div>
   <div class="grid">
     <div class="card"><h3>250+</h3><p>Campaigns Managed</p></div>
-    <div class="card"><h3>5x – 10x</h3><p>Average ROI</p></div>
+    <div class="card"><h3>5x–10x</h3><p>Average ROI</p></div>
     <div class="card"><h3>1000+</h3><p>Leads Generated</p></div>
     <div class="card"><h3>98%</h3><p>Client Satisfaction</p></div>
   </div>
 </section>
 
-<section>
-  <div class="title">
-    <h2>Client Feedback</h2>
-  </div>
-  <div class="grid">
-    <div class="card">“Quality leads & honest communication.”</div>
-    <div class="card">“Landing page + ads worked really well.”</div>
-    <div class="card">“Professional team, good ROI.”</div>
-  </div>
-</section>
-
 <section id="contact">
   <div class="title">
-    <h2>Connect With Us</h2>
-    <p>Quick reply on all platforms</p>
+    <h2>CONNECT WITH US</h2>
+    <p>Fast response on all platforms</p>
   </div>
+
   <div class="contact-bar">
-    <a class="whatsapp" href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
-    <a class="insta" href="https://instagram.com/yourusername" target="_blank">Instagram</a>
-    <a class="fb" href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+    <a class="whatsapp" href="https://wa.me/917042139521" target="_blank">WhatsApp</a>
+    <a class="insta" href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank">Instagram</a>
+    <a class="fb" href="https://www.facebook.com/share/1AWYNuqdVf/" target="_blank">Facebook</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Your Brand Name • Google Ads • Meta Ads • Landing Pages • Lead Generation
+  © 2026 AdsAgency • GOOGLE ADS • META ADS • LANDING PAGES • LEAD GENERATION
 </footer>
+
+<!-- FLOATING CALL -->
+<a href="tel:7042139521" class="call-float">📞</a>
 
 </body>
 </html>
