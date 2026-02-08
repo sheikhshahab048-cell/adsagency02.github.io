@@ -3,118 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Agency</title>
+<title>Ads & Growth Agency</title>
 
 <style>
 :root{
-  --bg:#0b1220;
-  --card:#111a2e;
-  --primary:#4f8cff;
-  --text:#e5e7eb;
-  --soft:#94a3b8;
+  --primary:#2563eb;
+  --secondary:#22c55e;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,Arial,sans-serif}
 body{
-  background:radial-gradient(circle at top,#111827,#020617);
+  background:linear-gradient(180deg,#f8fafc,#eef2ff);
   color:var(--text);
 }
 
-/* NAV */
+/* HEADER */
 header{
+  background:#fff;
   padding:18px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
 }
 header h2{color:var(--primary)}
 nav a{
-  color:var(--soft);
-  margin-left:22px;
+  margin-left:20px;
   text-decoration:none;
+  color:var(--muted);
+  font-weight:500;
 }
-nav a:hover{color:#fff}
+nav a:hover{color:var(--primary)}
 
 /* HERO */
 .hero{
   padding:90px 8%;
   text-align:center;
 }
-.hero h1{
-  font-size:44px;
-  margin-bottom:15px;
-}
+.hero h1{font-size:44px;margin-bottom:15px}
 .hero p{
-  max-width:720px;
+  max-width:760px;
   margin:auto;
-  color:var(--soft);
+  color:var(--muted);
   font-size:18px;
 }
-.hero .btn{
+.btn{
   display:inline-block;
   margin-top:30px;
   padding:14px 36px;
   border-radius:40px;
-  background:linear-gradient(135deg,#4f8cff,#2563eb);
+  background:linear-gradient(135deg,#2563eb,#22c55e);
   color:#fff;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 15px 40px rgba(79,140,255,.4);
+  box-shadow:0 18px 40px rgba(37,99,235,.35);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{padding:80px 8%}
 .title{text-align:center;margin-bottom:50px}
 .title h2{font-size:34px}
-.title p{color:var(--soft);margin-top:8px}
+.title p{color:var(--muted);margin-top:8px}
 
 /* 3D CARDS */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
 }
 .card{
-  background:linear-gradient(145deg,#0f172a,#020617);
+  background:var(--card);
   padding:30px;
   border-radius:22px;
-  position:relative;
-  box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,.05),
-    0 20px 60px rgba(0,0,0,.7);
+  box-shadow:0 15px 40px rgba(0,0,0,.12);
   transition:.4s cubic-bezier(.175,.885,.32,1.275);
 }
 .card:hover{
   transform:translateY(-12px) scale(1.03);
-  box-shadow:
-    inset 0 0 0 1px rgba(79,140,255,.4),
-    0 30px 90px rgba(79,140,255,.45);
+  box-shadow:0 30px 80px rgba(37,99,235,.35);
 }
-.card h3{
-  color:var(--primary);
-  margin-bottom:10px;
-}
-.card p{color:var(--soft);font-size:15px}
+.card h3{color:var(--primary);margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
 
-/* STEPS */
-.steps li{
-  list-style:none;
-  margin-bottom:18px;
+/* CONTACT */
+.contact-bar{
+  background:#fff;
+  padding:25px;
+  border-radius:22px;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:15px;
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
 }
-
-/* TESTIMONIAL */
-.testimonial{
-  font-style:italic;
+.contact-bar a{
+  text-decoration:none;
+  color:#fff;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:600;
 }
-
-/* FAQ */
-.faq p{margin-bottom:18px}
+.whatsapp{background:#25d366}
+.insta{background:#e1306c}
+.fb{background:#1877f2}
 
 /* FOOTER */
 footer{
-  padding:30px;
+  padding:40px;
+  background:#fff;
   text-align:center;
-  color:#94a3b8;
-  border-top:1px solid rgba(255,255,255,.05);
+  color:var(--muted);
+  box-shadow:0 -10px 30px rgba(0,0,0,.08);
 }
 
 @media(max-width:600px){
@@ -128,94 +132,83 @@ footer{
 <header>
   <h2>YourBrand</h2>
   <nav>
-    <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
-    <a href="#work">Process</a>
-    <a href="#faq">FAQ</a>
+    <a href="#results">Results</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Grow Faster With Smart Digital Solutions</h1>
-  <p>We help businesses build trust, generate quality leads, and scale with clean strategy and strong execution.</p>
-  <a href="#services" class="btn">Get Started</a>
-</section>
-
-<section id="about">
-  <div class="title">
-    <h2>About Us</h2>
-    <p>Professional • Transparent • Result Driven</p>
-  </div>
-  <div class="grid">
-    <div class="card">
-      <h3>Who We Are</h3>
-      <p>A focused digital team helping businesses grow with modern tools and smart strategies.</p>
-    </div>
-    <div class="card">
-      <h3>Our Mission</h3>
-      <p>Deliver quality work, honest communication, and long-term growth.</p>
-    </div>
-    <div class="card">
-      <h3>Our Approach</h3>
-      <p>We plan, execute, optimize, and support — no shortcuts.</p>
-    </div>
-  </div>
+  <h1>Google Ads, Meta Ads & Landing Pages That Convert</h1>
+  <p>We help businesses generate quality leads with high-performing ads and conversion-focused landing pages.</p>
+  <a href="#contact" class="btn">Start Now</a>
 </section>
 
 <section id="services">
   <div class="title">
     <h2>Our Services</h2>
-    <p>Designed to build trust & performance</p>
+    <p>Everything required for online growth</p>
   </div>
   <div class="grid">
-    <div class="card"><h3>Digital Advertising</h3><p>High-converting ads that reach the right audience.</p></div>
-    <div class="card"><h3>Website Development</h3><p>Fast, clean, responsive websites.</p></div>
-    <div class="card"><h3>Lead Generation</h3><p>Targeted strategies for real leads.</p></div>
-    <div class="card"><h3>Growth Support</h3><p>End-to-end digital scaling.</p></div>
-  </div>
-</section>
-
-<section id="why">
-  <div class="title"><h2>Why Choose Us</h2></div>
-  <div class="grid">
-    <div class="card">✔ Trusted & Experienced Team</div>
-    <div class="card">✔ Clear & Honest Process</div>
-    <div class="card">✔ Fast Support</div>
-    <div class="card">✔ Long-Term Results</div>
-  </div>
-</section>
-
-<section id="work">
-  <div class="title"><h2>How It Works</h2></div>
-  <div class="grid">
-    <div class="card">1️⃣ Requirement & Discussion</div>
-    <div class="card">2️⃣ Strategy Planning</div>
-    <div class="card">3️⃣ Execution</div>
-    <div class="card">4️⃣ Monitoring & Support</div>
+    <div class="card"><h3>Google Ads</h3><p>Search & Performance Max campaigns for high-intent leads.</p></div>
+    <div class="card"><h3>Meta Ads</h3><p>Facebook & Instagram ads optimised for conversions.</p></div>
+    <div class="card"><h3>Landing Pages</h3><p>Fast, mobile-first pages designed to convert.</p></div>
+    <div class="card"><h3>Lead Generation</h3><p>Targeted strategy to bring genuine leads.</p></div>
+    <div class="card"><h3>Ads Optimization</h3><p>Daily monitoring, testing & scaling.</p></div>
+    <div class="card"><h3>Tracking Setup</h3><p>Pixel, conversion tracking & analytics.</p></div>
   </div>
 </section>
 
 <section>
-  <div class="title"><h2>Testimonials</h2></div>
+  <div class="title">
+    <h2>Why Clients Trust Us</h2>
+  </div>
   <div class="grid">
-    <div class="card testimonial">“Professional work and great support.”</div>
-    <div class="card testimonial">“Clean design, good results.”</div>
-    <div class="card testimonial">“Very smooth experience.”</div>
+    <div class="card">✔ Transparent Process</div>
+    <div class="card">✔ Budget Focused Strategy</div>
+    <div class="card">✔ Fast Support</div>
+    <div class="card">✔ Long Term Growth</div>
   </div>
 </section>
 
-<section id="faq">
-  <div class="title"><h2>FAQ</h2></div>
-  <div class="grid faq">
-    <div class="card"><p><b>How to start?</b><br>Contact us using available options.</p></div>
-    <div class="card"><p><b>Is support included?</b><br>Yes, continuous support is provided.</p></div>
-    <div class="card"><p><b>Is payment safe?</b><br>100% transparent & secure.</p></div>
+<section id="results">
+  <div class="title">
+    <h2>Our Results</h2>
+    <p>Real performance, not fake promises</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>250+</h3><p>Campaigns Managed</p></div>
+    <div class="card"><h3>5x – 10x</h3><p>Average ROI</p></div>
+    <div class="card"><h3>1000+</h3><p>Leads Generated</p></div>
+    <div class="card"><h3>98%</h3><p>Client Satisfaction</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="title">
+    <h2>Client Feedback</h2>
+  </div>
+  <div class="grid">
+    <div class="card">“Quality leads & honest communication.”</div>
+    <div class="card">“Landing page + ads worked really well.”</div>
+    <div class="card">“Professional team, good ROI.”</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="title">
+    <h2>Connect With Us</h2>
+    <p>Quick reply on all platforms</p>
+  </div>
+  <div class="contact-bar">
+    <a class="whatsapp" href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+    <a class="insta" href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+    <a class="fb" href="https://facebook.com/yourpage" target="_blank">Facebook</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Your Brand Name. All Rights Reserved.
+  © 2026 Your Brand Name • Google Ads • Meta Ads • Landing Pages • Lead Generation
 </footer>
 
 </body>
