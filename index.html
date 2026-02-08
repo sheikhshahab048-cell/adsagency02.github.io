@@ -2,32 +2,330 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Ads Agency</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ads Agency 0.2 | Google Ads • Meta Ads • Growth</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Poppins;background:#f8fafc;color:#0f172a}
-header{padding:20px 8%;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08);display:flex;justify-content:space-between}
-a{text-decoration:none;color:#2563eb;font-weight:600;margin-left:20px}
-.hero{text-align:center;padding:100px 8%}
-.hero h1{font-size:44px}
-.btn{display:inline-block;margin-top:25px;padding:14px 36px;background:#2563eb;color:#fff;border-radius:40px}
+/* ================= ROOT ================= */
+:root{
+  --primary:#2563eb;
+  --secondary:#22c55e;
+  --accent:#9333ea;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#64748b;
+}
+
+/* ================= GLOBAL ================= */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  background:linear-gradient(180deg,#f8fafc,#eef2ff);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#fff;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+.logo{
+  font-size:26px;
+  font-weight:800;
+  color:var(--primary);
+  text-shadow:2px 2px 0 rgba(37,99,235,.15);
+}
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:var(--muted);
+  font-weight:600;
+}
+nav a:hover{color:var(--primary)}
+
+/* ================= HERO ================= */
+.hero{
+  padding:110px 8%;
+  text-align:center;
+}
+.hero h1{
+  font-size:52px;
+  font-weight:800;
+}
+.hero h1 span{
+  color:var(--primary);
+}
+.hero p{
+  max-width:850px;
+  margin:20px auto;
+  font-size:18px;
+  color:var(--muted);
+}
+.cta{
+  margin-top:35px;
+}
+.btn{
+  display:inline-block;
+  padding:16px 42px;
+  border-radius:50px;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 20px 50px rgba(37,99,235,.4);
+  transition:.4s;
+}
+.btn:hover{transform:translateY(-4px) scale(1.03)}
+
+/* ================= SECTION ================= */
+section{
+  padding:90px 8%;
+}
+.title{
+  text-align:center;
+  margin-bottom:60px;
+}
+.title h2{
+  font-size:42px;
+  font-weight:800;
+}
+.title p{
+  color:var(--muted);
+  margin-top:10px;
+  font-size:17px;
+}
+
+/* ================= 3D BOXES ================= */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:35px;
+}
+.card{
+  background:var(--card);
+  padding:35px;
+  border-radius:26px;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.12),
+    inset 0 0 0 2px rgba(37,99,235,.05);
+  transition:.45s cubic-bezier(.175,.885,.32,1.275);
+}
+.card:hover{
+  transform:translateY(-15px) scale(1.05);
+  box-shadow:
+    0 40px 100px rgba(37,99,235,.35),
+    inset 0 0 0 2px rgba(37,99,235,.35);
+}
+.card h3{
+  color:var(--primary);
+  margin-bottom:14px;
+  font-size:22px;
+  font-weight:800;
+}
+.card p{
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.7;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+.float-whatsapp, .float-call{
+  position:fixed;
+  right:22px;
+  padding:16px 20px;
+  border-radius:50%;
+  color:#fff;
+  font-size:22px;
+  z-index:9999;
+  box-shadow:0 20px 50px rgba(0,0,0,.4);
+  animation:pulse 1.8s infinite;
+}
+.float-whatsapp{
+  bottom:100px;
+  background:#25d366;
+}
+.float-call{
+  bottom:30px;
+  background:#22c55e;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(0,0,0,.3)}
+  70%{box-shadow:0 0 0 22px rgba(0,0,0,0)}
+  100%{box-shadow:0 0 0 0 rgba(0,0,0,0)}
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#fff;
+  padding:50px 8%;
+  text-align:center;
+  color:var(--muted);
+  box-shadow:0 -10px 40px rgba(0,0,0,.08);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:600px){
+  .hero h1{font-size:34px}
+  .title h2{font-size:30px}
+}
 </style>
 </head>
+
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
-<h2>AdsAgency</h2>
-<nav>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-</nav>
+  <div class="logo">Ads Agency 0.2</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
-<h1>GOOGLE ADS • META ADS • LANDING PAGES</h1>
-<p>High converting ads & landing pages for real business growth</p>
-<a class="btn" href="services.html">View Services</a>
+  <h1><span>GOOGLE ADS</span>, <span>META ADS</span> &<br>High-Converting Digital Growth</h1>
+  <p>
+    Ads Agency 0.2 helps businesses generate quality leads, reduce ad waste,
+    and scale profitably using data-driven advertising, conversion-focused landing pages,
+    and premium creatives.
+  </p>
+  <div class="cta">
+    <a href="#contact" class="btn">Start Growth Now</a>
+  </div>
 </section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="title">
+    <h2>OUR CORE SERVICES</h2>
+    <p>Everything an agency needs to grow brands online</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>GOOGLE ADS</h3>
+      <p>
+        High-intent Google Ads campaigns focused on conversions and ROI.
+        Includes keyword research, competitor analysis, Search, Display,
+        Performance Max, call ads, conversion tracking, CPC optimization,
+        and continuous scaling.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>META ADS (FB + INSTAGRAM)</h3>
+      <p>
+        Performance-driven Meta Ads with advanced audience targeting,
+        creative testing, lead forms, website traffic campaigns,
+        retargeting funnels, lookalike audiences, and daily optimization.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>LANDING PAGE DESIGN</h3>
+      <p>
+        Fast, mobile-first, ad-friendly landing pages designed to convert traffic
+        into leads using strong CTAs, trust elements, WhatsApp integration,
+        and A/B testing structure.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>WEBSITE DEVELOPMENT</h3>
+      <p>
+        Clean, modern, responsive websites for businesses and brands.
+        SEO-friendly structure, fast loading speed, premium UI,
+        and conversion-optimized layouts.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>CREATIVE & DESIGN</h3>
+      <p>
+        Scroll-stopping ad creatives, banners, reels concepts,
+        thumbnails, and brand-focused visuals designed to increase CTR
+        and engagement.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>TRACKING & OPTIMIZATION</h3>
+      <p>
+        Google Tag Manager, Meta Pixel, Analytics setup,
+        event tracking, funnel analysis, reporting,
+        and continuous performance improvement.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section id="why">
+  <div class="title">
+    <h2>WHY ADS AGENCY 0.2</h2>
+    <p>Not promises. Only performance.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">✔ ROI-Focused Strategy</div>
+    <div class="card">✔ No Fake Guarantees</div>
+    <div class="card">✔ Transparent Work</div>
+    <div class="card">✔ Fast WhatsApp Support</div>
+    <div class="card">✔ Scalable Growth Model</div>
+    <div class="card">✔ Long-Term Business Mindset</div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="title">
+    <h2>CONNECT WITH US</h2>
+    <p>Fast response • Honest guidance • Real growth</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>WhatsApp</h3>
+      <p>Instant support & discussion</p>
+      <a class="btn" href="https://wa.me/917042139521">Chat Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Instagram</h3>
+      <p>Follow our work & updates</p>
+      <a class="btn" href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx">Visit Instagram</a>
+    </div>
+
+    <div class="card">
+      <h3>Facebook</h3>
+      <p>Connect on Facebook</p>
+      <a class="btn" href="https://www.facebook.com/share/1AWYNuqdVf/">Visit Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ads Agency 0.2 • GOOGLE ADS • META ADS • LANDING PAGES • WEBSITE DEVELOPMENT • CREATIVES
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/917042139521" class="float-whatsapp">💬</a>
+<a href="tel:7042139521" class="float-call">📞</a>
 
 </body>
 </html>
