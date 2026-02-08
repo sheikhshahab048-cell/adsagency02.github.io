@@ -2,234 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ads Agency0.2</title>
-
+<title>Ads Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-:root{
-  --primary:#2563eb;
-  --secondary:#22c55e;
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --text:#0f172a;
-  --muted:#64748b;
-}
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-
-body{
-  background:linear-gradient(180deg,#f8fafc,#eef2ff);
-  color:var(--text);
-}
-
-/* HEADER */
-header{
-  background:#fff;
-  padding:18px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-header h2{color:var(--primary);font-weight:700}
-nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:var(--muted);
-  font-weight:500;
-}
-nav a:hover{color:var(--primary)}
-
-/* HERO */
-.hero{
-  padding:90px 8%;
-  text-align:center;
-}
-.hero h1{
-  font-size:46px;
-  font-weight:700;
-}
-.hero span{
-  color:var(--primary);
-}
-.hero p{
-  max-width:780px;
-  margin:15px auto;
-  color:var(--muted);
-  font-size:18px;
-}
-.btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:15px 40px;
-  border-radius:40px;
-  background:linear-gradient(135deg,#2563eb,#22c55e);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  box-shadow:0 18px 40px rgba(37,99,235,.35);
-}
-
-/* SECTION */
-section{padding:80px 8%}
-.title{text-align:center;margin-bottom:50px}
-.title h2{font-size:36px;font-weight:700}
-.title p{color:var(--muted);margin-top:8px}
-
-/* 3D BOXES */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
-.card{
-  background:var(--card);
-  padding:32px;
-  border-radius:22px;
-  box-shadow:0 15px 40px rgba(0,0,0,.12);
-  transition:.4s cubic-bezier(.175,.885,.32,1.275);
-}
-.card:hover{
-  transform:translateY(-12px) scale(1.04);
-  box-shadow:0 30px 80px rgba(37,99,235,.35);
-}
-.card h3{
-  color:var(--primary);
-  margin-bottom:12px;
-  font-size:20px;
-  font-weight:700;
-}
-.card p{
-  color:var(--muted);
-  font-size:15px;
-}
-
-/* CONTACT BAR */
-.contact-bar{
-  background:#fff;
-  padding:30px;
-  border-radius:22px;
-  display:flex;
-  justify-content:space-around;
-  flex-wrap:wrap;
-  gap:15px;
-  box-shadow:0 20px 50px rgba(0,0,0,.12);
-}
-.contact-bar a{
-  text-decoration:none;
-  color:#fff;
-  padding:14px 32px;
-  border-radius:40px;
-  font-weight:600;
-}
-.whatsapp{background:#25d366}
-.insta{background:#e1306c}
-.fb{background:#1877f2}
-
-/* FLOATING CALL BUTTON */
-.call-float{
-  position:fixed;
-  right:20px;
-  bottom:30px;
-  background:#22c55e;
-  color:#fff;
-  padding:16px 20px;
-  border-radius:50%;
-  font-size:20px;
-  text-decoration:none;
-  box-shadow:0 15px 40px rgba(34,197,94,.6);
-  animation:pulse 1.8s infinite;
-  z-index:999;
-}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(34,197,94,.7)}
-  70%{box-shadow:0 0 0 20px rgba(34,197,94,0)}
-  100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}
-}
-
-/* FOOTER */
-footer{
-  padding:40px;
-  background:#fff;
-  text-align:center;
-  color:var(--muted);
-  box-shadow:0 -10px 30px rgba(0,0,0,.08);
-}
-
-@media(max-width:600px){
-  .hero h1{font-size:32px}
-}
+body{margin:0;font-family:Poppins;background:#f8fafc;color:#0f172a}
+header{padding:20px 8%;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08);display:flex;justify-content:space-between}
+a{text-decoration:none;color:#2563eb;font-weight:600;margin-left:20px}
+.hero{text-align:center;padding:100px 8%}
+.hero h1{font-size:44px}
+.btn{display:inline-block;margin-top:25px;padding:14px 36px;background:#2563eb;color:#fff;border-radius:40px}
 </style>
 </head>
-
 <body>
 
 <header>
-  <h2>AdsAgency</h2>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#results">Results</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<h2>AdsAgency</h2>
+<nav>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h1><span>GOOGLE ADS</span>, <span>META ADS</span> &<br> High-Converting Landing Pages</h1>
-  <p>We help businesses generate quality leads with performance-driven ads and premium landing pages.</p>
-  <a href="#contact" class="btn">Get Started</a>
+<h1>GOOGLE ADS • META ADS • LANDING PAGES</h1>
+<p>High converting ads & landing pages for real business growth</p>
+<a class="btn" href="services.html">View Services</a>
 </section>
-
-<section id="services">
-  <div class="title">
-    <h2>OUR SERVICES</h2>
-    <p>Complete advertising & growth solutions</p>
-  </div>
-
-  <div class="grid">
-    <div class="card"><h3>GOOGLE ADS</h3><p>Search, Display & Performance Max campaigns for high-intent traffic.</p></div>
-    <div class="card"><h3>META ADS</h3><p>Facebook & Instagram ads designed for conversions.</p></div>
-    <div class="card"><h3>LANDING PAGE DESIGN</h3><p>Fast, mobile-first landing pages that convert clicks into leads.</p></div>
-    <div class="card"><h3>LEAD GENERATION</h3><p>Targeted strategy to bring genuine and interested leads.</p></div>
-    <div class="card"><h3>ADS OPTIMIZATION</h3><p>Daily monitoring, testing & ROI scaling.</p></div>
-    <div class="card"><h3>TRACKING SETUP</h3><p>Google Tag, Pixel & conversion tracking.</p></div>
-  </div>
-</section>
-
-<section id="results">
-  <div class="title">
-    <h2>PROVEN RESULTS</h2>
-  </div>
-  <div class="grid">
-    <div class="card"><h3>250+</h3><p>Campaigns Managed</p></div>
-    <div class="card"><h3>5x–10x</h3><p>Average ROI</p></div>
-    <div class="card"><h3>1000+</h3><p>Leads Generated</p></div>
-    <div class="card"><h3>98%</h3><p>Client Satisfaction</p></div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="title">
-    <h2>CONNECT WITH US</h2>
-    <p>Fast response on all platforms</p>
-  </div>
-
-  <div class="contact-bar">
-    <a class="whatsapp" href="https://wa.me/917042139521" target="_blank">WhatsApp</a>
-    <a class="insta" href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank">Instagram</a>
-    <a class="fb" href="https://www.facebook.com/share/1AWYNuqdVf/" target="_blank">Facebook</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 AdsAgency • GOOGLE ADS • META ADS • LANDING PAGES • LEAD GENERATION
-</footer>
-
-<!-- FLOATING CALL -->
-<a href="tel:7042139521" class="call-float">📞</a>
 
 </body>
 </html>
