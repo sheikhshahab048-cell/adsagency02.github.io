@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel | Ads Agency 0.2</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+  <style>
+    body{font-family:Poppins,Arial;background:#f1f5f9;padding:40px}
+    .box{max-width:500px;margin:auto;background:#fff;padding:30px;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.15)}
+    input,textarea,button{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #ccc}
+    button{background:#2563eb;color:#fff;font-weight:700;border:none}
+    h2{color:#2563eb;text-align:center}
+    img{width:100%;border-radius:12px;margin-top:10px}
+  </style>
+</head>
+<body>
+
+<div class="box" id="loginBox">
+  <h2>Admin Login</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="box" id="adminBox" style="display:none">
+  <h2>Add Proof</h2>
+  <input id="title" placeholder="Proof Title">
+  <textarea id="desc" placeholder="Description"></textarea>
+  <input type="file" id="image">
+  <button onclick="addProof()">Upload Proof</button>
+  <button onclick="logout()" style="background:#ef4444;margin-top:15px">Logout</button>
+</div>
+
+<script>
+  // 🔥 PASTE YOUR FIREBASE CONFIG HERE
+  const firebaseConfig = {
+    apiKey: "PASTE_HERE",
+    authDomain: "PASTE_HERE",
+    projectId: "PASTE_HERE",
+    storageBucket: "PASTE_HERE",
+    messagingSenderId: "PASTE_HERE",
+    appId: "PASTE_HERE"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+
+  function login(){
+    auth.signInWithEmailAndPassword(email.value, password.value)
+    .then(()=>{
+      loginBox.style.display="none";
+      adminBox.style.display="block";
+    }).catch(err=>alert(err.message));
+  }
+
+  function logout(){
+    auth.signOut().then(()=>location.reload());
+  }
+
+  function addProof(){
+    const file = image.files[0];
+    if(!file){alert("Select image");return;}
+
+    const ref = storage.ref("proofs/"+Date.now()+file.name);
+    ref.put(file).then(()=>{
+      ref.getDownloadURL().then(url=>{
+        db.collection("proofs").add({
+          title:title.value,
+          desc:desc.value,
+          image:url,
+          time:new Date()
+        });
+        alert("Proof uploaded");
+        title.value=""; desc.value=""; image.value="";
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
