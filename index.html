@@ -3,65 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADS AGENCY 0.2 | ELITE PERFORMANCE</title>
+    <title>ADS AGENCY 0.2 | GOOGLE & META ADS EXPERTS</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
         :root {
-            --primary: #2563eb;
-            --dark-bg: #0a0a0a;
-            --card-bg: #141414;
+            --primary: #0066ff;
+            --bg: #050505;
+            --card: #111111;
         }
 
         body {
-            background-color: var(--dark-bg);
+            background-color: var(--bg);
             color: #ffffff;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
 
-        .heading { font-family: 'Lexend', sans-serif; }
-
-        /* 3D Icon Floating Effect */
-        .icon-3d {
-            filter: drop-shadow(0 10px 20px rgba(37, 99, 235, 0.3));
-            animation: float 4s ease-in-out infinite;
-            width: 80px; height: 80px;
+        .poppins-bold { 
+            font-family: 'Poppins', sans-serif; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
         }
+
+        .glass-card {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .icon-3d {
+            filter: drop-shadow(0 10px 15px rgba(0, 102, 255, 0.4));
+            animation: float 4s ease-in-out infinite;
+            width: 70px; height: 70px;
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
 
-        /* Glass Cards */
-        .premium-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 24px;
-            transition: all 0.3s ease;
-        }
-        .premium-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Pulse Animation for Contact */
-        .pulse-glow {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
-        }
-
-        /* Bouncy WhatsApp */
         .wa-float {
             position: fixed;
             bottom: 25px;
@@ -69,142 +61,187 @@
             z-index: 100;
             animation: bounce 2s infinite;
         }
+
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-12px);}
-        }
-
-        .nav-glass {
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            40% {transform: translateY(-10px);}
         }
     </style>
 </head>
 <body>
 
-    <nav class="nav-glass fixed w-full z-50 px-6 py-4 flex justify-between items-center">
-        <div class="text-lg font-bold tracking-tight heading">ADS AGENCY <span class="text-blue-500">0.2</span></div>
-        <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-gray-400">
-            <a href="#services" class="hover:text-white transition">Services</a>
-            <a href="#process" class="hover:text-white transition">Process</a>
-            <a href="#faq" class="hover:text-white transition">FAQ</a>
-            <a href="#contact" class="hover:text-white transition">Contact</a>
-        </div>
-        <a href="https://wa.me/917042139521" class="bg-blue-600 px-6 py-2 rounded-full text-[10px] font-bold tracking-widest hover:bg-blue-700 transition">FREE AUDIT</a>
-    </nav>
-
     <a href="https://wa.me/917042139521" class="wa-float">
-        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" class="w-14 h-14" alt="WA">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" class="w-14 h-14" alt="WhatsApp">
     </a>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="heading text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Data-First <span class="text-blue-500">Performance</span> <br> Architects
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-lg border-b border-white/5">
+        <div class="text-xl font-extrabold poppins-bold">ADS AGENCY <span class="text-blue-500">0.2</span></div>
+        <div class="hidden lg:flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+            <a href="#services" class="hover:text-white transition">Services</a>
+            <a href="#process" class="hover:text-white transition">How it Works</a>
+            <a href="#faq" class="hover:text-white transition">Questions</a>
+            <a href="#contact" class="hover:text-white transition">Contact</a>
+        </div>
+        <div class="flex gap-4">
+            <a href="tel:+917042139521" class="bg-white text-black px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest flex items-center gap-2">
+                <i class="fas fa-phone"></i> CALL NOW
+            </a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div data-aos="fade-up">
+            <h1 class="poppins-bold text-4xl md:text-7xl font-black mb-6 leading-tight">
+                GROW YOUR BUSINESS WITH <br> <span class="text-blue-500">GOOGLE & META ADS</span>
             </h1>
-            <p class="max-w-xl text-gray-400 text-sm font-light mb-10 mx-auto">
-                Hum aapke ad spend ko profit mein convert karte hain. Specializing in Meta, Google, and High-Converting Funnels.
+            <p class="max-w-2xl text-gray-400 text-sm md:text-base font-light mb-10 mx-auto uppercase tracking-wide">
+                We manage your advertising so you can focus on your business. More leads. More sales. More profit.
             </p>
-            <div class="flex gap-4 justify-center">
-                <a href="#contact" class="bg-white text-black px-8 py-4 rounded-xl font-bold text-xs uppercase transition hover:scale-105">Start Your Project</a>
-                <a href="#services" class="border border-white/20 px-8 py-4 rounded-xl font-bold text-xs uppercase hover:bg-white/5 transition">Our Expertise</a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-blue-700 transition shadow-lg shadow-blue-500/20">Get Started</a>
+                <a href="tel:+917042139521" class="border border-white/20 px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-white/5 transition">Direct Call</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 max-w-6xl mx-auto">
-        <h2 class="heading text-2xl text-center mb-20" data-aos="fade-up">CORE EXPERTISE</h2>
+    <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
+        <h2 class="poppins-bold text-3xl text-center mb-20" data-aos="fade-up">WHAT WE DO</h2>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="premium-card p-10 text-center" data-aos="fade-right">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="icon-3d mx-auto mb-8" alt="Meta">
-                <h3 class="heading text-xl mb-4 uppercase">Meta Advertising</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Scaling brands on Facebook and Instagram using advanced psychological triggers and machine learning.</p>
+            <div class="glass-card p-12 text-center" data-aos="fade-right">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="icon-3d mx-auto mb-8" alt="Meta Ads">
+                <h3 class="poppins-bold text-2xl mb-4">META ADS</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">We run professional ads on Facebook and Instagram to find your ideal customers where they spend their time.</p>
+                <ul class="text-[11px] text-blue-500 font-bold tracking-widest space-y-2 uppercase">
+                    <li>✓ INSTAGRAM REELS ADS</li>
+                    <li>✓ FACEBOOK FEED ADS</li>
+                    <li>✓ TARGETED AUDIENCE RESEARCH</li>
+                </ul>
             </div>
-            <div class="premium-card p-10 text-center" data-aos="fade-left">
-                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="icon-3d mx-auto mb-8" alt="Google">
-                <h3 class="heading text-xl mb-4 uppercase">Google Domination</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Being there when they search. From Search Ads to YouTube, we capture high-intent buyers.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="process" class="py-24 px-6 bg-white/[0.02]">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="heading text-2xl mb-20" data-aos="fade-up">OUR PROVEN PROCESS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="premium-card p-8" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="text-blue-500 text-3xl font-black mb-4">01</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase tracking-widest">Audit</h4>
-                    <p class="text-gray-500 text-[11px]">Identifying gaps in your current strategy.</p>
-                </div>
-                <div class="premium-card p-8" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="text-blue-500 text-3xl font-black mb-4">02</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase tracking-widest">Creative</h4>
-                    <p class="text-gray-500 text-[11px]">Building high-end scroll-stopping content.</p>
-                </div>
-                <div class="premium-card p-8" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="text-blue-500 text-3xl font-black mb-4">03</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase tracking-widest">Launch</h4>
-                    <p class="text-gray-500 text-[11px]">A/B testing with scientific precision.</p>
-                </div>
-                <div class="premium-card p-8" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="text-blue-500 text-3xl font-black mb-4">04</div>
-                    <h4 class="font-bold text-sm mb-2 uppercase tracking-widest">Scale</h4>
-                    <p class="text-gray-500 text-[11px]">Multiplying budgets on winning ads.</p>
-                </div>
+            <div class="glass-card p-12 text-center" data-aos="fade-left">
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="icon-3d mx-auto mb-8" alt="Google Ads">
+                <h3 class="poppins-bold text-2xl mb-4">GOOGLE ADS</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">We put your business at the top of Google Search. Capture people who are actively looking for your services.</p>
+                <ul class="text-[11px] text-blue-500 font-bold tracking-widest space-y-2 uppercase">
+                    <li>✓ GOOGLE SEARCH ADS</li>
+                    <li>✓ YOUTUBE VIDEO ADS</li>
+                    <li>✓ GOOGLE MAPS VISIBILITY</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-24 px-6 max-w-4xl mx-auto">
-        <h2 class="heading text-2xl text-center mb-16" data-aos="fade-up">FREQUENTLY ASKED</h2>
+    <section class="py-32 px-6 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="poppins-bold text-3xl mb-8">LANDING PAGES & <br> AD CREATIVES</h2>
+                <p class="text-gray-400 mb-8 text-sm leading-relaxed">Ads only work if people like what they see. We build fast-loading websites and design beautiful graphics to make sure people buy from you.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-card p-6">
+                        <i class="fas fa-rocket text-blue-500 text-2xl mb-4"></i>
+                        <h4 class="font-bold text-xs uppercase mb-2">Fast Websites</h4>
+                        <p class="text-[10px] text-gray-500">Highly optimized landing pages for conversions.</p>
+                    </div>
+                    <div class="glass-card p-6">
+                        <i class="fas fa-paint-brush text-blue-500 text-2xl mb-4"></i>
+                        <h4 class="font-bold text-xs uppercase mb-2">Creative Design</h4>
+                        <p class="text-[10px] text-gray-500">Video and image ads that grab attention.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center" data-aos="zoom-in">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055683.png" class="w-64 h-64 icon-3d" alt="Design 3D">
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-32 px-6 max-w-7xl mx-auto">
+        <h2 class="poppins-bold text-3xl text-center mb-20" data-aos="fade-up">OUR SIMPLE PROCESS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <div class="glass-card p-8 text-center" data-aos="flip-up" data-aos-delay="100">
+                <div class="text-blue-500 font-black text-2xl mb-4">01</div>
+                <p class="font-bold text-xs uppercase">Strategy</p>
+            </div>
+            <div class="glass-card p-8 text-center" data-aos="flip-up" data-aos-delay="200">
+                <div class="text-blue-500 font-black text-2xl mb-4">02</div>
+                <p class="font-bold text-xs uppercase">Setup</p>
+            </div>
+            <div class="glass-card p-8 text-center" data-aos="flip-up" data-aos-delay="300">
+                <div class="text-blue-500 font-black text-2xl mb-4">03</div>
+                <p class="font-bold text-xs uppercase">Creatives</p>
+            </div>
+            <div class="glass-card p-8 text-center" data-aos="flip-up" data-aos-delay="400">
+                <div class="text-blue-500 font-black text-2xl mb-4">04</div>
+                <p class="font-bold text-xs uppercase">Launch</p>
+            </div>
+            <div class="glass-card p-8 text-center" data-aos="flip-up" data-aos-delay="500">
+                <div class="text-blue-500 font-black text-2xl mb-4">05</div>
+                <p class="font-bold text-xs uppercase">Scale</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 px-6 max-w-4xl mx-auto">
+        <h2 class="poppins-bold text-3xl text-center mb-20" data-aos="fade-up">FREQUENT QUESTIONS</h2>
         <div class="space-y-4">
-            <details class="premium-card p-6 cursor-pointer group" data-aos="fade-up">
-                <summary class="list-none text-sm font-bold flex justify-between items-center uppercase tracking-widest">
-                    Do you handle landing pages?
-                    <i class="fas fa-chevron-down text-blue-500 group-open:rotate-180 transition"></i>
+            <details class="glass-card p-6 group transition-all" data-aos="fade-up">
+                <summary class="list-none font-bold text-xs uppercase tracking-widest cursor-pointer flex justify-between items-center">
+                    How much should I spend on ads?
+                    <i class="fas fa-plus text-blue-500 group-open:rotate-45 transition"></i>
                 </summary>
-                <p class="text-gray-500 text-xs mt-6 leading-relaxed">Yes, we build custom conversion-optimized landing pages because ads fail without a proper destination.</p>
+                <p class="text-gray-500 text-xs mt-6 leading-relaxed">It depends on your business goals. We usually recommend starting with a small daily budget and increasing it once we see good results.</p>
             </details>
-            <details class="premium-card p-6 cursor-pointer group" data-aos="fade-up">
-                <summary class="list-none text-sm font-bold flex justify-between items-center uppercase tracking-widest">
-                    What is the minimum budget?
-                    <i class="fas fa-chevron-down text-blue-500 group-open:rotate-180 transition"></i>
+            <details class="glass-card p-6 group transition-all" data-aos="fade-up">
+                <summary class="list-none font-bold text-xs uppercase tracking-widest cursor-pointer flex justify-between items-center">
+                    Do you guarantee results?
+                    <i class="fas fa-plus text-blue-500 group-open:rotate-45 transition"></i>
                 </summary>
-                <p class="text-gray-500 text-xs mt-6 leading-relaxed">We work with brands spending at least ₹50k/month to ensure enough data for optimization.</p>
+                <p class="text-gray-500 text-xs mt-6 leading-relaxed">We guarantee professional management and high-quality ads. While no one can guarantee sales, our data-driven approach maximizes your chances of success.</p>
             </details>
-            <details class="premium-card p-6 cursor-pointer group" data-aos="fade-up">
-                <summary class="list-none text-sm font-bold flex justify-between items-center uppercase tracking-widest">
-                    Do you provide ad creatives?
-                    <i class="fas fa-chevron-down text-blue-500 group-open:rotate-180 transition"></i>
+            <details class="glass-card p-6 group transition-all" data-aos="fade-up">
+                <summary class="list-none font-bold text-xs uppercase tracking-widest cursor-pointer flex justify-between items-center">
+                    Will you design the ads?
+                    <i class="fas fa-plus text-blue-500 group-open:rotate-45 transition"></i>
                 </summary>
-                <p class="text-gray-500 text-xs mt-6 leading-relaxed">Absolutely. Our creative studio handles graphics, video hooks, and high-converting copy.</p>
+                <p class="text-gray-500 text-xs mt-6 leading-relaxed">Yes, our team handles all the graphics and video editing needed for your Google and Meta campaigns.</p>
+            </details>
+            <details class="glass-card p-6 group transition-all" data-aos="fade-up">
+                <summary class="list-none font-bold text-xs uppercase tracking-widest cursor-pointer flex justify-between items-center">
+                    Which is better: Google or Meta?
+                    <i class="fas fa-plus text-blue-500 group-open:rotate-45 transition"></i>
+                </summary>
+                <p class="text-gray-500 text-xs mt-6 leading-relaxed">Google is great for people actively searching for you. Meta (Facebook/Instagram) is great for building brand awareness and finding new audiences.</p>
+            </details>
+            <details class="glass-card p-6 group transition-all" data-aos="fade-up">
+                <summary class="list-none font-bold text-xs uppercase tracking-widest cursor-pointer flex justify-between items-center">
+                    How long is the contract?
+                    <i class="fas fa-plus text-blue-500 group-open:rotate-45 transition"></i>
+                </summary>
+                <p class="text-gray-500 text-xs mt-6 leading-relaxed">We work on a month-to-month basis. We want you to stay with us because of the results we deliver, not because of a long contract.</p>
             </details>
         </div>
     </section>
 
-    <section id="contact" class="py-32 px-6 text-center bg-[#0c0c0c]">
-        <h2 class="heading text-3xl mb-20 uppercase tracking-tighter" data-aos="zoom-in">Let's Talk <span class="text-blue-500">Business</span></h2>
+    <section id="contact" class="py-40 px-6 text-center">
+        <h2 class="poppins-bold text-4xl md:text-6xl mb-16" data-aos="zoom-in">CONTACT US</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <a href="https://www.instagram.com/adsagency0.2" class="premium-card p-10 flex flex-col items-center group" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" class="w-16 h-16 mb-6 icon-3d group-hover:scale-110 transition" alt="Instagram">
-                <p class="text-[10px] font-black tracking-[0.3em] opacity-50 uppercase">Instagram</p>
+            <a href="tel:+917042139521" class="glass-card p-10 flex flex-col items-center group transition" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://cdn-icons-png.flaticon.com/512/3616/3616215.png" class="w-16 h-16 mb-4 icon-3d" alt="Call">
+                <span class="font-bold uppercase tracking-widest text-[10px] text-blue-500">Call Directly</span>
             </a>
-            <a href="https://wa.me/917042139521" class="premium-card p-10 flex flex-col items-center pulse-glow border-blue-600/50" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" class="w-16 h-16 mb-6 icon-3d" alt="WhatsApp">
-                <p class="text-[10px] font-black tracking-[0.3em] text-blue-500 uppercase">WhatsApp Now</p>
+            <a href="https://wa.me/917042139521" class="glass-card p-10 flex flex-col items-center group transition border-blue-600/50" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" class="w-16 h-16 mb-4 icon-3d" alt="WhatsApp">
+                <span class="font-bold uppercase tracking-widest text-[10px] text-blue-500">WhatsApp Chat</span>
             </a>
-            <a href="https://www.facebook.com/share/1V8P6vsYXR/" class="premium-card p-10 flex flex-col items-center group" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="w-16 h-16 mb-6 icon-3d group-hover:scale-110 transition" alt="Facebook">
-                <p class="text-[10px] font-black tracking-[0.3em] opacity-50 uppercase">Facebook</p>
+            <a href="https://www.instagram.com/adsagency0.2" class="glass-card p-10 flex flex-col items-center group transition" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" class="w-16 h-16 mb-4 icon-3d" alt="Instagram">
+                <span class="font-bold uppercase tracking-widest text-[10px] text-blue-500">Instagram</span>
             </a>
         </div>
-        <p class="mt-32 text-[10px] tracking-[1em] opacity-20 uppercase">AdsAgency02.in</p>
+        <p class="mt-24 text-[10px] tracking-[1em] opacity-30 uppercase">ADSAGENCY02.IN</p>
     </section>
 
-    <footer class="py-10 text-center border-t border-white/5 opacity-40 text-[9px] tracking-[0.4em] font-bold">
-        &copy; 2026 ADS AGENCY 0.2 | BUILT FOR HIGH-PERFORMANCE
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-[10px] font-bold tracking-widest uppercase">
+        &copy; 2026 ADS AGENCY 0.2. ALL RIGHTS RESERVED.
     </footer>
 
     <script>
