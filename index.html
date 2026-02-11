@@ -3,194 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdsAgency02 | Premium Performance Marketing Agency</title>
+    <title>ADSAGENCY02 | Elite Performance Marketing</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
-        .hero-gradient { background: radial-gradient(circle at top right, #eff6ff, #ffffff); }
-        .card-3d { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
-        .card-3d:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .float-icon { animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        :root { --accent: #3b82f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; scroll-behavior: smooth; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .glass-card:hover { border-color: var(--accent); transform: translateY(-10px); background: rgba(59, 130, 246, 0.05); shadow: 0 0 30px rgba(59, 130, 246, 0.2); }
+        .text-gradient { background: linear-gradient(to right, #fff, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { box-shadow: 0 0 50px -10px var(--accent); }
+        .nav-blur { background: rgba(5, 5, 5, 0.8); backdrop-filter: saturate(180%) blur(20px); }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body>
 
-    <a href="https://wa.me/917042139521" class="fixed bottom-6 right-6 z-50 bg-[#25D366] p-4 rounded-2xl shadow-2xl flex items-center gap-3 text-white font-bold hover:scale-110 transition-all">
-        <i class="fab fa-whatsapp text-2xl"></i>
-        <span class="hidden md:inline">Free Strategy Call</span>
-    </a>
-
-    <nav class="glass sticky top-0 z-40 border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-extrabold tracking-tighter text-blue-600">ADSAGENCY<span class="text-slate-900">02</span></div>
-            <div class="hidden lg:flex space-x-10 text-sm font-bold uppercase tracking-widest text-slate-600">
-                <a href="#services" class="hover:text-blue-600 transition">Services</a>
-                <a href="#why-us" class="hover:text-blue-600 transition">Why Us</a>
-                <a href="#process" class="hover:text-blue-600 transition">Process</a>
-                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+    <nav class="nav-blur sticky top-0 z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter uppercase">AdsAgency<span class="text-blue-500">02</span></div>
+            <div class="hidden md:flex space-x-10 text-xs font-bold tracking-[0.2em] uppercase text-gray-400">
+                <a href="#about" class="hover:text-white transition">Approach</a>
+                <a href="#services" class="hover:text-white transition">Expertise</a>
+                <a href="#packages" class="hover:text-white transition">Pricing</a>
             </div>
-            <a href="tel:+917042139521" class="bg-slate-900 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg shadow-blue-200">
-                Call Now
-            </a>
+            <a href="https://wa.me/917042139521" class="glow bg-blue-600 text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-blue-500 transition-all">Free Audit</a>
         </div>
     </nav>
 
-    <header class="hero-gradient pt-20 pb-32 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-block bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-black tracking-widest uppercase mb-6 border border-blue-100">
-                🚀 Top Rated Ad Agency 2024
-            </div>
-            <h1 class="text-5xl md:text-8xl font-extrabold leading-[1.1] mb-8 tracking-tighter">
-                Scale Your Revenue <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 italic">Predictably.</span>
+    <section class="relative pt-32 pb-48 px-8 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h1 class="text-6xl md:text-9xl font-black mb-8 tracking-tighter leading-none text-gradient">
+                WE BUILD <br> REVENUE ENGINES.
             </h1>
-            <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-                We don't just "run ads". We build growth engines using Meta, Google, High-Converting Landing Pages, and Premium Creatives.
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                Elite-level Meta & Google Ads management. We combine high-performance data with world-class creative design.
             </p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="#contact" class="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl hover:shadow-blue-300 transition-all">Book Free Strategy Call</a>
-                <a href="https://wa.me/917042139521" class="bg-white border-2 border-slate-100 px-10 py-5 rounded-2xl font-black text-lg hover:border-blue-600 transition-all">Chat on WhatsApp</a>
-            </div>
-            <div class="mt-16 flex flex-wrap justify-center gap-10 opacity-40 grayscale">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="h-8" alt="FB">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-8" alt="Google">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" class="h-8" alt="Insta">
-            </div>
-        </div>
-    </header>
-
-    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-20">
-            <h2 class="text-4xl font-black mb-4 tracking-tight">Everything You Need To Grow</h2>
-            <p class="text-slate-500">Ek agency, saare solutions.</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="card-3d bg-white p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600 text-2xl">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-                <h3 class="text-xl font-black mb-3">Meta Ads</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Scaling FB & Instagram using advanced CAPI and broad targeting methods.</p>
-            </div>
-            <div class="card-3d bg-white p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 text-red-500 text-2xl">
-                    <i class="fab fa-google"></i>
-                </div>
-                <h3 class="text-xl font-black mb-3">Google Ads</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Search, Shopping, and YouTube ads designed to dominate the market.</p>
-            </div>
-            <div class="card-3d bg-white p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 text-purple-600 text-2xl">
-                    <i class="fas fa-paint-brush"></i>
-                </div>
-                <h3 class="text-xl font-black mb-3">Ad Creatives</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">High-converting images & video hooks that stop the scroll instantly.</p>
-            </div>
-            <div class="card-3d bg-white p-8 rounded-[2rem]">
-                <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 text-emerald-600 text-2xl">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h3 class="text-xl font-black mb-3">Landing Pages</h3>
-                <p class="text-slate-500 text-sm leading-relaxed">Custom-built funnels and pages designed for maximum conversion rates.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#contact" class="bg-white text-black px-12 py-5 rounded-full font-black text-lg hover:scale-105 transition">Start Scaling</a>
+                <a href="tel:+917042139521" class="border border-white/20 px-12 py-5 rounded-full font-black text-lg hover:bg-white/5 transition">Book a Call</a>
             </div>
         </div>
     </section>
 
-    <section id="why-us" class="py-24 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-16">Why AdsAgency02?</h2>
-            <div class="grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-slate-200 shadow-2xl">
-                <div class="bg-white p-10">
-                    <h4 class="text-xl font-bold mb-8 text-slate-400">Other Agencies</h4>
-                    <ul class="space-y-6">
-                        <li class="flex items-center gap-3 text-slate-400"><i class="fas fa-times-circle text-red-400"></i> Slow communication</li>
-                        <li class="flex items-center gap-3 text-slate-400"><i class="fas fa-times-circle text-red-400"></i> No focus on creatives</li>
-                        <li class="flex items-center gap-3 text-slate-400"><i class="fas fa-times-circle text-red-400"></i> Basic reporting</li>
-                        <li class="flex items-center gap-3 text-slate-400"><i class="fas fa-times-circle text-red-400"></i> Only "managing" spend</li>
+    <section class="py-20 border-y border-white/5 bg-white/[0.01]">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-12 text-center">
+            <div><p class="text-5xl font-black text-blue-500">₹1Cr+</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">Spend Managed</p></div>
+            <div><p class="text-5xl font-black text-white">4.8x</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">Avg. ROAS</p></div>
+            <div><p class="text-5xl font-black text-white">500+</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">Creatives Built</p></div>
+            <div><p class="text-5xl font-black text-white">24/7</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">Client Support</p></div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-4xl font-black mb-4 uppercase tracking-tighter">The Ecosystem</h2>
+                <div class="h-1 w-20 bg-blue-600"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-10 rounded-[2.5rem]">
+                    <i class="fab fa-meta text-4xl text-blue-500 mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-4">Meta Performance</h3>
+                    <p class="text-gray-400 leading-relaxed">Advanced pixel tracking, CAPI integration, and scaling strategies for Instagram/FB.</p>
+                </div>
+                <div class="glass-card p-10 rounded-[2.5rem]">
+                    <i class="fab fa-google text-4xl text-blue-500 mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-4">Google Search/Pmax</h3>
+                    <p class="text-gray-400 leading-relaxed">Dominate search results and shopping feeds with intent-based buyer keyword targeting.</p>
+                </div>
+                <div class="glass-card p-10 rounded-[2.5rem]">
+                    <i class="fas fa-bolt text-4xl text-blue-500 mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-4">Conversion Pages</h3>
+                    <p class="text-gray-400 leading-relaxed">We design lightning-fast landing pages optimized for one thing: Sales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="py-32 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-center text-4xl font-black mb-20 uppercase tracking-tighter">Strategic Packages</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-white/10 p-10 rounded-3xl">
+                    <h4 class="text-xl font-bold mb-2">Growth Starter</h4>
+                    <p class="text-3xl font-black mb-6">₹25k<span class="text-sm text-gray-500">/mo</span></p>
+                    <ul class="space-y-4 text-sm text-gray-400 mb-8">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Meta or Google Ads</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> 5 Premium Creatives</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Weekly Reporting</li>
                     </ul>
+                    <a href="https://wa.me/917042139521" class="block text-center border border-white/20 py-3 rounded-full hover:bg-white hover:text-black transition">Choose</a>
                 </div>
-                <div class="bg-blue-600 p-10 text-white">
-                    <h4 class="text-xl font-bold mb-8 opacity-80">AdsAgency02</h4>
-                    <ul class="space-y-6">
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-blue-300"></i> 24/7 WhatsApp Support</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-blue-300"></i> Creative & Copy Included</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-blue-300"></i> Daily Data Tracking</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-blue-300"></i> Direct ROI Focused Approach</li>
+                <div class="bg-blue-600 p-10 rounded-3xl scale-105 shadow-2xl shadow-blue-600/20">
+                    <h4 class="text-xl font-bold mb-2">Performance Plus</h4>
+                    <p class="text-3xl font-black mb-6">₹50k<span class="text-sm text-blue-100">/mo</span></p>
+                    <ul class="space-y-4 text-sm text-blue-100 mb-8">
+                        <li><i class="fas fa-check text-white mr-2"></i> Meta + Google Ads</li>
+                        <li><i class="fas fa-check text-white mr-2"></i> Unlimited Creatives</li>
+                        <li><i class="fas fa-check text-white mr-2"></i> 1 High-Converting Landing Page</li>
+                        <li><i class="fas fa-check text-white mr-2"></i> Dedicated Account Manager</li>
                     </ul>
+                    <a href="https://wa.me/917042139521" class="block text-center bg-white text-black py-3 rounded-full font-bold transition">Most Popular</a>
+                </div>
+                <div class="border border-white/10 p-10 rounded-3xl">
+                    <h4 class="text-xl font-bold mb-2">Scale Pro</h4>
+                    <p class="text-3xl font-black mb-6">Custom</p>
+                    <ul class="space-y-4 text-sm text-gray-400 mb-8">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Full Funnel Management</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Video Ad Production</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> CRO & SEO</li>
+                    </ul>
+                    <a href="https://wa.me/917042139521" class="block text-center border border-white/20 py-3 rounded-full hover:bg-white hover:text-black transition">Contact Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="process" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl font-black text-center mb-20">The 4-Step Growth Blueprint</h2>
-        <div class="grid md:grid-cols-4 gap-8 relative">
-            <div class="text-center">
-                <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">1</div>
-                <h4 class="font-bold mb-2">Audit</h4>
-                <p class="text-slate-500 text-sm">Identifying leaks in your current system.</p>
-            </div>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">2</div>
-                <h4 class="font-bold mb-2">Build</h4>
-                <p class="text-slate-500 text-sm">Launching high-converting creatives & pages.</p>
-            </div>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">3</div>
-                <h4 class="font-bold mb-2">Launch</h4>
-                <p class="text-slate-500 text-sm">Aggressive testing on Google & Meta.</p>
-            </div>
-            <div class="text-center">
-                <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-xl">4</div>
-                <h4 class="font-bold mb-2">Scale</h4>
-                <p class="text-slate-500 text-sm">Doubling down on winning combinations.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 px-6 bg-slate-900 text-white overflow-hidden relative">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <h2 class="text-4xl md:text-6xl font-black text-center mb-10 tracking-tighter">Ready to take the <span class="text-blue-500">Leap?</span></h2>
-            <div class="bg-white/5 backdrop-blur-xl p-10 rounded-[3rem] border border-white/10 shadow-2xl">
-                <form action="https://wa.me/917042139521" class="grid md:grid-cols-2 gap-6">
-                    <div class="col-span-2 md:col-span-1">
-                        <label class="block text-sm font-bold mb-2 text-slate-400 uppercase tracking-widest">Name</label>
-                        <input type="text" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl outline-none focus:border-blue-500 transition" placeholder="Aapka Naam">
-                    </div>
-                    <div class="col-span-2 md:col-span-1">
-                        <label class="block text-sm font-bold mb-2 text-slate-400 uppercase tracking-widest">Monthly Spend</label>
-                        <select class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl outline-none focus:border-blue-500">
-                            <option class="text-black">Below ₹1 Lakh</option>
-                            <option class="text-black">₹1 Lakh - ₹5 Lakh</option>
-                            <option class="text-black">₹5 Lakh+</option>
-                        </select>
-                    </div>
-                    <div class="col-span-2">
-                        <label class="block text-sm font-bold mb-2 text-slate-400 uppercase tracking-widest">Website URL</label>
-                        <input type="text" class="w-full bg-white/5 border border-white/10 p-4 rounded-2xl outline-none focus:border-blue-500" placeholder="https://yourwebsite.com">
-                    </div>
-                    <button class="col-span-2 bg-blue-600 text-white font-black py-5 rounded-2xl text-xl hover:bg-blue-700 hover:scale-[1.02] transition shadow-xl shadow-blue-500/20">Book My Free Strategy Session</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 px-6 border-t border-slate-100 bg-white">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-center">
+    <footer class="py-20 px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
             <div>
-                <div class="text-3xl font-black mb-4">ADSAGENCY02</div>
-                <p class="text-slate-400">Making advertising profitable for modern brands.</p>
+                <div class="text-2xl font-black mb-2 uppercase">AdsAgency<span class="text-blue-500">02</span></div>
+                <p class="text-gray-500 text-sm">The gold standard in performance advertising.</p>
             </div>
-            <div class="flex justify-center space-x-6 text-2xl text-slate-900">
-                <a href="https://www.instagram.com/adsagency0.2?igsh=dXZoY2dweml5ZXgx" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/share/1V8P6vsYXR/" target="_blank" class="hover:text-blue-600 transition"><i class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/917042139521" class="hover:text-blue-600 transition"><i class="fab fa-whatsapp"></i></a>
+            <div class="flex space-x-8">
+                <a href="https://www.instagram.com/adsagency0.2" class="text-2xl hover:text-blue-500 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/1V8P6vsYXR/" class="text-2xl hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/917042139521" class="text-2xl hover:text-blue-500 transition"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <div class="text-right text-slate-400 text-sm">
-                &copy; 2024 adsagency02.in <br> Built for High-Performance.
+            <div class="text-gray-600 text-xs tracking-widest">
+                &copy; 2026 ADSAGENCY02.IN | ALL RIGHTS RESERVED
             </div>
         </div>
     </footer>
