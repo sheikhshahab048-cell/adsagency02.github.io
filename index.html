@@ -3,62 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADS AGENCY 0.2 | THE ELITE PERFORMANCE ARCHITECTS</title>
+    <title>ADS AGENCY 0.2 | PERFORMANCE ARCHITECTS</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Lexend:wght@300;500;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
         :root {
-            --accent: #0062ff;
-            --bg: #050505;
-            --surface: #111111;
+            --primary: #007aff;
+            --dark: #080808;
+            --card-bg: #121212;
         }
 
         body {
-            background-color: var(--bg);
+            background-color: var(--dark);
             color: #ffffff;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Outfit', sans-serif;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .syne { font-family: 'Syne', sans-serif; text-transform: uppercase; }
+        .heading-font { font-family: 'Lexend', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* 3D Background Animation */
-        #canvas-container {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
-            background: radial-gradient(circle at 50% 50%, #111 0%, #000 100%);
+        /* 3D Glass Box */
+        .glass-box {
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            transition: all 0.4s ease;
+        }
+        .glass-box:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 122, 255, 0.15);
+            transform: translateY(-8px);
         }
 
-        /* Highlight Boxes */
-        .box-premium {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .box-premium:hover {
-            border-color: var(--accent);
-            box-shadow: 0 0 50px rgba(0, 98, 255, 0.2);
-            transform: scale(1.02) translateY(-5px);
+        /* Text Wrap Animation Effect */
+        .text-wrap-reveal {
+            overflow: hidden;
+            display: inline-block;
         }
 
-        /* 3D Floating Animation */
+        /* 3D Floating Icons */
         .float-3d {
-            animation: floating 3s ease-in-out infinite;
+            animation: floating 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 15px rgba(0, 122, 255, 0.3));
         }
         @keyframes floating {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
         }
 
-        /* WhatsApp Bouncy Popup */
+        /* WhatsApp Bouncy */
         .wa-float {
             position: fixed;
             bottom: 30px;
@@ -68,158 +67,161 @@
         }
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-20px);}
-            60% {transform: translateY(-10px);}
+            40% {transform: translateY(-15px);}
         }
 
-        /* Gradient Text */
-        .text-glow {
-            background: linear-gradient(180deg, #fff 0%, #555 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .scroll-indicator {
-            width: 2px;
-            height: 80px;
-            background: linear-gradient(to bottom, var(--accent), transparent);
-            margin: 20px auto;
-        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
     </style>
 </head>
 <body>
 
-    <div id="canvas-container"></div>
-
     <a href="https://wa.me/917042139521" class="wa-float">
-        <div class="bg-[#25D366] p-5 rounded-full shadow-[0_0_30px_#25D366] flex items-center justify-center">
+        <div class="bg-[#25D366] p-4 rounded-full shadow-2xl">
             <i class="fab fa-whatsapp text-3xl"></i>
         </div>
     </a>
 
-    <nav class="fixed w-full z-50 px-10 py-6 flex justify-between items-center backdrop-blur-xl border-b border-white/5">
-        <div class="text-2xl font-black tracking-tighter uppercase">ADS AGENCY <span class="text-blue-600">0.2</span></div>
-        <div class="hidden lg:flex space-x-12 text-[10px] font-black tracking-[0.4em] uppercase opacity-60">
-            <a href="#expertise" class="hover:text-blue-500 transition">Expertise</a>
-            <a href="#creatives" class="hover:text-blue-500 transition">Creatives</a>
-            <a href="#faq" class="hover:text-blue-500 transition">FAQ</a>
+    <nav class="fixed w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-md border-b border-white/5">
+        <div class="text-xl font-black tracking-tighter">ADS AGENCY <span class="text-blue-500">0.2</span></div>
+        <div class="hidden md:flex space-x-8 text-[11px] font-bold tracking-widest uppercase text-white/60">
+            <a href="#about" class="hover:text-white transition">The Process</a>
+            <a href="#services" class="hover:text-white transition">Expertise</a>
+            <a href="#contact" class="hover:text-white transition">Connect</a>
         </div>
-        <a href="#contact" class="bg-white text-black px-8 py-3 rounded-sm font-black text-xs tracking-widest hover:bg-blue-600 hover:text-white transition">GET IN TOUCH</a>
+        <a href="https://wa.me/917042139521" class="bg-blue-600 text-white px-6 py-2 rounded-full text-[10px] font-black tracking-widest hover:bg-blue-700 transition">FREE AUDIT</a>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center pt-20 px-6">
-        <div class="text-center" data-aos="zoom-in" data-aos-duration="1500">
-            <h1 class="text-7xl md:text-[12rem] font-black leading-[0.8] tracking-tighter text-glow mb-10">
-                ELITE <br> GROWTH
+    <section class="h-screen flex flex-col justify-center items-center px-6 text-center">
+        <div data-aos="fade-down" data-aos-duration="1200">
+            <h1 class="heading-font text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Data Driven <span class="text-blue-500 italic">Growth</span> <br> For Modern Brands
             </h1>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-                <div class="box-premium p-6 rounded-2xl max-w-sm">
-                    <p class="text-xs font-bold tracking-widest text-blue-500 mb-2 uppercase">Core Philosophy</p>
-                    <p class="text-sm opacity-50 font-light">We don't just run ads. We engineer high-performance revenue ecosystems for 8-figure brands.</p>
+            <p class="max-w-2xl text-gray-400 text-sm md:text-base font-light mb-10 mx-auto">
+                We bridge the gap between complex algorithms and high-converting creative strategy. No fluff, just scalable ROI.
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="#contact" class="bg-white text-black px-10 py-4 rounded-xl font-bold text-sm">BOOK STRATEGY</a>
+                <a href="#services" class="border border-white/20 px-10 py-4 rounded-xl font-bold text-sm">EXPLORE</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
+        <h2 class="heading-font text-3xl text-center mb-20" data-aos="fade-up">CORE EXPERTISE</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-box p-10 flex flex-col items-center text-center" data-aos="fade-right">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="w-16 h-16 mb-6 float-3d" alt="Meta">
+                <h3 class="heading-font text-xl mb-4">Meta Ads Mastery</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Scaling brands on FB & IG using ASC+ campaigns and high-retention video funnels.</p>
+            </div>
+            <div class="glass-box p-10 flex flex-col items-center text-center" data-aos="fade-left">
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="w-16 h-16 mb-6 float-3d" alt="Google">
+                <h3 class="heading-font text-xl mb-4">Google Ecosystem</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Search, YouTube and Performance Max. We capture the highest intent users in your niche.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="zoom-in-right">
+                <img src="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" class="w-64 mx-auto float-3d" alt="3D Creative">
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="heading-font text-3xl mb-6">Creatives & <br> High-ROI Funnels</h2>
+                <div class="space-y-6">
+                    <div class="glass-box p-6">
+                        <h4 class="font-bold text-blue-500 mb-2 underline decoration-blue-500 underline-offset-4">LANDING PAGES</h4>
+                        <p class="text-gray-400 text-xs">Custom-coded funnels that convert traffic into cold hard cash. 2s load time guaranteed.</p>
+                    </div>
+                    <div class="glass-box p-6">
+                        <h4 class="font-bold text-blue-500 mb-2 underline decoration-blue-500 underline-offset-4">AD CREATIVES</h4>
+                        <p class="text-gray-400 text-xs">UGC hooks and premium motion graphics designed to disrupt the user's scroll.</p>
+                    </div>
                 </div>
-                <img src="https://cdn-icons-png.flaticon.com/512/9438/9438155.png" class="w-32 h-32 float-3d hidden md:block" alt="3D Rocket">
-            </div>
-        </div>
-        <div class="scroll-indicator mt-20"></div>
-    </section>
-
-    <section id="expertise" class="py-40 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl md:text-6xl font-black mb-20 text-center" data-aos="fade-up">CORE EXPERTISE</h2>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="box-premium p-12 rounded-[3rem]" data-aos="fade-right">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="w-16 h-16 mb-8" alt="Meta 3D">
-                <h3 class="text-3xl font-black mb-6">META PERFORMANCE</h3>
-                <p class="text-gray-400 mb-8 leading-relaxed italic">Psychological targeting meets machine learning. We scale Facebook & Instagram using aggressive CAPI setups and creative-first scaling.</p>
-                <div class="flex gap-4">
-                    <span class="bg-blue-500/10 text-blue-500 px-4 py-1 rounded-full text-[10px] font-bold">CAPI</span>
-                    <span class="bg-blue-500/10 text-blue-500 px-4 py-1 rounded-full text-[10px] font-bold">ASC+</span>
-                    <span class="bg-blue-500/10 text-blue-500 px-4 py-1 rounded-full text-[10px] font-bold">LTV</span>
-                </div>
-            </div>
-            <div class="box-premium p-12 rounded-[3rem]" data-aos="fade-left">
-                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" class="w-16 h-16 mb-8" alt="Google 3D">
-                <h3 class="text-3xl font-black mb-6">GOOGLE DOMINANCE</h3>
-                <p class="text-gray-400 mb-8 leading-relaxed italic">Capturing intent. We dominate Search, YouTube, and Pmax to ensure your brand is the only choice when customers are ready to buy.</p>
-                <div class="flex gap-4">
-                    <span class="bg-blue-500/10 text-blue-500 px-4 py-1 rounded-full text-[10px] font-bold">SEM</span>
-                    <span class="bg-blue-500/10 text-blue-500 px-4 py-1 rounded-full text-[10px] font-bold">PMAX</span>
-                    <span class="bg-blue-500/10 text-blue-500 px-4 py-1 rounded-full text-[10px] font-bold">YOUTUBE</span>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6">
-        <div class="max-w-7xl mx-auto box-premium rounded-[4rem] overflow-hidden flex flex-col md:flex-row items-center" data-aos="flip-up">
-            <div class="p-16 md:w-1/2">
-                <h2 class="text-5xl font-black mb-8">HIGH-CONVERSION <br> LANDING PAGES</h2>
-                <p class="text-gray-400 mb-8">Sirf ad pe click hona kafi nahi hai. Conversion landing page pe hoti hai. Hum high-converting funnels aur conversion-optimized landing pages banate hain.</p>
-                <button class="bg-white text-black font-black px-10 py-4 rounded-full text-xs">VIEW PORTFOLIO</button>
+    <section class="py-32 px-6 max-w-7xl mx-auto text-center">
+        <h2 class="heading-font text-3xl mb-20" data-aos="fade-up">THE BLUEPRINT</h2>
+        <div class="grid md:grid-cols-4 gap-4">
+            <div class="glass-box p-8" data-aos="flip-up" data-aos-delay="100">
+                <div class="text-2xl font-black text-blue-500 mb-4">01</div>
+                <h5 class="font-bold mb-2">AUDIT</h5>
+                <p class="text-[10px] text-gray-500">Finding gaps in your current account.</p>
             </div>
-            <div class="md:w-1/2 p-10 flex justify-center">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055683.png" class="w-64 h-64 float-3d" alt="3D Landing Page">
+            <div class="glass-box p-8" data-aos="flip-up" data-aos-delay="200">
+                <div class="text-2xl font-black text-blue-500 mb-4">02</div>
+                <h5 class="font-bold mb-2">SETUP</h5>
+                <p class="text-[10px] text-gray-500">Tracking (CAPI) and funnel building.</p>
             </div>
-        </div>
-    </section>
-
-    <section id="creatives" class="py-40 px-6 max-w-7xl mx-auto text-center">
-        <h2 class="text-5xl font-black mb-20 tracking-tighter">CREATIVE STUDIO</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="box-premium aspect-square rounded-2xl flex items-center justify-center p-8" data-aos="fade-up" data-aos-delay="100">
-                <p class="font-black text-xs uppercase opacity-40">UGC Video Hooks</p>
+            <div class="glass-box p-8" data-aos="flip-up" data-aos-delay="300">
+                <div class="text-2xl font-black text-blue-500 mb-4">03</div>
+                <h5 class="font-bold mb-2">LAUNCH</h5>
+                <p class="text-[10px] text-gray-500">Aggressive creative A/B testing.</p>
             </div>
-            <div class="box-premium aspect-square rounded-2xl flex items-center justify-center p-8 bg-blue-600/10" data-aos="fade-up" data-aos-delay="200">
-                <p class="font-black text-xs uppercase">Premium Static Ads</p>
-            </div>
-            <div class="box-premium aspect-square rounded-2xl flex items-center justify-center p-8" data-aos="fade-up" data-aos-delay="300">
-                <p class="font-black text-xs uppercase opacity-40">Direct Response Copy</p>
-            </div>
-            <div class="box-premium aspect-square rounded-2xl flex items-center justify-center p-8" data-aos="fade-up" data-aos-delay="400">
-                <p class="font-black text-xs uppercase opacity-40">Video Sales Letters</p>
+            <div class="glass-box p-8" data-aos="flip-up" data-aos-delay="400">
+                <div class="text-2xl font-black text-blue-500 mb-4">04</div>
+                <h5 class="font-bold mb-2">SCALE</h5>
+                <p class="text-[10px] text-gray-500">Doubling budgets on winners.</p>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-40 px-6 max-w-4xl mx-auto">
-        <h2 class="text-4xl font-black text-center mb-20 uppercase">Common Queries</h2>
+    <section id="faq" class="py-32 px-6 max-w-3xl mx-auto">
+        <h2 class="heading-font text-2xl text-center mb-16" data-aos="fade-up">FAQs</h2>
         <div class="space-y-4">
-            <div class="box-premium p-6 rounded-2xl cursor-pointer hover:bg-white/5 transition">
-                <h4 class="font-bold flex justify-between">Q: Kya hum creatives banate hain? <i class="fas fa-plus text-blue-500"></i></h4>
-                <p class="text-gray-500 text-sm mt-4 hidden">Haan, humara main focus hi creative-first advertising par hai kyunki aaj ke time mein sirf targetting se kaam nahi chalta.</p>
-            </div>
-            <div class="box-premium p-6 rounded-2xl cursor-pointer hover:bg-white/5 transition">
-                <h4 class="font-bold flex justify-between">Q: Shuruat kaise hogi? <i class="fas fa-plus text-blue-500"></i></h4>
-                <p class="text-gray-500 text-sm mt-4 hidden">Pehle hum aapke purane data ka audit karenge, phir naya plan bana ke implement karenge.</p>
-            </div>
+            <details class="glass-box p-6 group transition-all" data-aos="fade-up">
+                <summary class="list-none font-bold cursor-pointer flex justify-between items-center">
+                    DO YOU OFFER CREATIVES?
+                    <i class="fas fa-chevron-down text-blue-500 group-open:rotate-180 transition"></i>
+                </summary>
+                <p class="text-gray-500 text-sm mt-4">Yes. We are a creative-led agency. We believe ads fail because of weak visuals, not just poor targeting.</p>
+            </details>
+            <details class="glass-box p-6 group transition-all" data-aos="fade-up">
+                <summary class="list-none font-bold cursor-pointer flex justify-between items-center">
+                    WHAT IS YOUR FEE?
+                    <i class="fas fa-chevron-down text-blue-500 group-open:rotate-180 transition"></i>
+                </summary>
+                <p class="text-gray-500 text-sm mt-4">We work on a fixed retainer + performance percentage basis to ensure we are aligned with your growth.</p>
+            </details>
         </div>
     </section>
 
-    <section id="contact" class="py-40 px-6 text-center relative overflow-hidden">
-        <div class="max-w-5xl mx-auto box-premium p-20 rounded-[5rem] border-2 border-blue-600/30">
-            <h2 class="text-6xl md:text-8xl font-black mb-12 tracking-tighter">LET'S BUILD <br> THE FUTURE.</h2>
-            <div class="flex flex-wrap justify-center gap-10">
-                <a href="https://wa.me/917042139521" class="text-2xl font-black underline underline-offset-8 decoration-blue-500 hover:text-blue-500 transition">WHATSAPP</a>
-                <a href="https://www.instagram.com/adsagency0.2" class="text-2xl font-black underline underline-offset-8 decoration-blue-500 hover:text-blue-500 transition">INSTAGRAM</a>
-                <a href="https://www.facebook.com/share/1V8P6vsYXR/" class="text-2xl font-black underline underline-offset-8 decoration-blue-500 hover:text-blue-500 transition">FACEBOOK</a>
-            </div>
-            <p class="mt-20 text-[10px] tracking-[1em] opacity-30">DOMAIN: ADSAGENCY02.IN</p>
+    <section id="contact" class="py-40 px-6 max-w-7xl mx-auto text-center">
+        <h2 class="heading-font text-4xl mb-16" data-aos="fade-up">LET'S START <span class="text-blue-500 italic">SCALING</span></h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <a href="https://www.instagram.com/adsagency0.2" class="glass-box p-10 flex flex-col items-center group" data-aos="zoom-in">
+                <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" class="w-16 h-16 mb-4 float-3d" alt="IG">
+                <span class="font-bold uppercase tracking-widest text-xs">Instagram</span>
+            </a>
+            <a href="https://wa.me/917042139521" class="glass-box p-10 flex flex-col items-center group border-blue-500/30" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" class="w-16 h-16 mb-4 float-3d" alt="WA">
+                <span class="font-bold uppercase tracking-widest text-xs">WhatsApp</span>
+            </a>
+            <a href="https://www.facebook.com/share/1V8P6vsYXR/" class="glass-box p-10 flex flex-col items-center group" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" class="w-16 h-16 mb-4 float-3d" alt="FB">
+                <span class="font-bold uppercase tracking-widest text-xs">Facebook</span>
+            </a>
         </div>
+        
+        <p class="mt-24 text-[9px] tracking-[1em] opacity-30">ADSAGENCY02.IN</p>
     </section>
 
-    <footer class="py-10 text-center border-t border-white/5 opacity-50 text-[10px] font-bold tracking-widest">
-        &copy; 2026 ADS AGENCY 0.2. ELITE PERFORMANCE ONLY.
+    <footer class="py-10 text-center border-t border-white/5 opacity-40 text-[10px] tracking-widest uppercase">
+        &copy; 2026 THE ELITE PERFORMANCE UNIT. NO BRAINERS ONLY.
     </footer>
 
     <script>
-        // Initialize Animations
-        AOS.init({ duration: 1000, once: false });
-
-        // Simple FAQ Toggle
-        document.querySelectorAll('.box-premium').forEach(item => {
-            item.addEventListener('click', () => {
-                const p = item.querySelector('p');
-                if(p) p.classList.toggle('hidden');
-            });
+        AOS.init({
+            duration: 1000,
+            offset: 100,
+            once: false,
+            mirror: true
         });
     </script>
 </body>
